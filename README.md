@@ -16,6 +16,7 @@ git clone https://github.com/kajstof/dotfiles
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.config/i3 ~/.config/i3
+ln -s ~/dotfiles/.config/fontconfig ~/.config/fontconfig
 ```
 
 ## Vim Plugin installation
