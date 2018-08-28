@@ -13,8 +13,9 @@ cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/kajstof/dotfiles
-ln ~/dotfiles/.vimrc ~/.vimrc -s
-ln ~/dotfiles/.Xresources ~/.Xresources -s
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.Xresources ~/.Xresources
+ln -s ~/dotfiles/.config/i3 ~/.config/i3
 ```
 
 ## Vim Plugin installation
