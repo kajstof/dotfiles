@@ -18,6 +18,7 @@ ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.config/fontconfig ~/.config/fontconfig
 ln -s ~/dotfiles/.config/i3 ~/.config/i3
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
+ln -s ~/dotfiles/.config/termite ~/.config/termite
 ```
 
 ## Vim Plugin installation
