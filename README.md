@@ -13,3 +13,9 @@ ln dotfiles/.vimrc ~/.vimrc -s
 ## In VI editor run command:
 
     :PluginInstall
+
+## Configure GitHub SSH key
+
+```bash
+cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
+```
