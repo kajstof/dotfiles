@@ -2,6 +2,12 @@
 
 My config files
 
+## Configure GitHub SSH key
+
+```bash
+cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
+```
+
 ## Basic setup
 
 ```bash
@@ -10,12 +16,11 @@ git clone https://github.com/kajstof/dotfiles
 ln dotfiles/.vimrc ~/.vimrc -s
 ```
 
-## In VI editor run command:
+## Vim Plugin installation
 
-    :PluginInstall
+Open Vim and run `:PluginInstall`
 
-## Configure GitHub SSH key
+Or install from command line: `vim +PluginInstall +qall`
 
-```bash
-cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
-```
+
+
