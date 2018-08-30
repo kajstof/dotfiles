@@ -1,3 +1,8 @@
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 set langmenu=en_US
 let $LANG='en_US'
 set encoding=utf8
@@ -26,6 +31,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'OmniSharp/omnisharp-vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
