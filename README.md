@@ -28,3 +28,5 @@ Open Vim and run `:PluginInstall`
 Or install from command line: `vim +PluginInstall +qall`
 
 Fonts installation: `sudo apt-get install fonts-powerline`
+
+Set ZSH as default shell: `chsh -s /bin/zsh root`
