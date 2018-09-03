@@ -36,3 +36,6 @@ Set ZSH as default shell: `chsh -s /bin/zsh root`
 - Boostnote
 - Visual Studio Code
 - Chrome
+- DotNet Core
+- Python
+- NodeJS
