@@ -80,32 +80,27 @@ set rtp+=$HOME/.vim/bundle/Vundle.vim/
 "call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-call vundle#begin('$HOME/.vim/bundle/')
+call vundle#begin('~/.vim/bundle/')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" Plugins tested
 Plugin 'morhetz/gruvbox'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'OmniSharp/omnisharp-vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" Plugins to test
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'neomake/neomake'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,17 +118,20 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "Airline setting theme
-let g:airline_theme = 'powerlineish'
-"let g:airline_theme = 'dracula'
-let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
+"let g:airline_theme='dracula'
+let g:airline_powerline_fonts=1
 
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
 
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
+" Set colorscheme
 colorscheme darkblue    " hack for dark gruvbox scheme (@TODO fix)
 colorscheme gruvbox
 
-" Useful mappings
- 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
 map Y y$
+map <C-n> :NERDTreeToggle<CR>
