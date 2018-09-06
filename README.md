@@ -117,7 +117,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # My config files configuration
-git clone https://github.com/kajstof/dotfiles ~
+git clone https://github.com/kajstof/dotfiles ~/dotfiles
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.config/fontconfig ~/.config/fontconfig
