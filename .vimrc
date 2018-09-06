@@ -94,13 +94,13 @@ Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-fugitive'
 
 " Plugins to test
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'pangloss/vim-javascript'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'neomake/neomake'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'tpope/vim-commentary'
+"Plugin 'tpope/vim-surround'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'vim-syntastic/syntastic'
+"Plugin 'neomake/neomake'
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
