@@ -1,11 +1,6 @@
 # Add 'git lg' alias
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-# Add user to docker group. Added user can run docker command without sudo command
-sudo gpasswd -a "${USER}" docker
-sudo reboot
-# docker run hello-world
-
 # Add Vundle to vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -19,7 +14,12 @@ ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/termite ~/.config/termite
 
 # Vim plugins installation
-# vim +PluginInstall +qall
+vim +PluginInstall +qall
 
 # Set zsh as default shell
 sudo chsh -s /bin/zsh root
+
+# Add user to docker group. Added user can run docker command without sudo command
+sudo gpasswd -a "${USER}" docker
+sudo reboot
+# docker run hello-world
