@@ -4,7 +4,7 @@
 
 1. Clone dotfiles to $HOME directory
 
-```bash
+```sh
 git clone https://github.com/kajstof/dotfiles ~
 ```
 
@@ -32,13 +32,13 @@ source ~/dotfiles/.vimrc
 
 ### Quick installation
 
-```bash
-
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/kajstof/dotfiles/master/install.sh)"
 ```
 
 ### Manual installation
 
-```bash
+```sh
 # Create ~/Tools dir
 mkdir -p ~/Tools
 
@@ -103,13 +103,13 @@ sudo apt install -y docker-ce
 
 ### Quick configuration
 
-```bash
-
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/kajstof/dotfiles/master/configure.sh)"
 ```
 
 ### Manual configuration
 
-```bash
+```sh
 # Add 'git lg' alias
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
@@ -141,7 +141,7 @@ sudo chsh -s /bin/zsh root
 
 ### Commands
 
-```bash
+```sh
 xset r rate 180 50
 xdpyinfo | grep resolution
 xrandr --output Virtual1 --mode 1920x1080
@@ -152,7 +152,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 ### GitHub SSH key configuration
 
-```bash
+```sh
 cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 ```
 
