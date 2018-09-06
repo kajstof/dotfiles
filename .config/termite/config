@@ -1,6 +1,11 @@
 [options]
 font = Ubuntu Mono 11
 
+# Dracula theme for termite
+# https://github.com/dracula/termite
+# Copyright 2013-present, All rights reserved
+# Code licensed under the MIT license
+
 [colors]
 
 # special
