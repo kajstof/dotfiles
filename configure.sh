@@ -24,5 +24,10 @@ sudo chsh -s /bin/zsh root
 
 # Add user to docker group. Added user can run docker command without sudo command
 sudo gpasswd -a "${USER}" docker
-sudo reboot
-# docker run hello-world
+
+read -r -p "Do you want to restart computer? [y/n] " response
+response=${response,,}    # tolower
+if [[ "$response" =~ ^(yes|y)$ ]]
+then
+    sudo reboot
+fi
