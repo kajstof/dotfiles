@@ -23,6 +23,7 @@ source ~/dotfiles/.vimrc
     - HDD recommend: 64 GB (100 MB EFI, 24 GB ext4 /, 40 GB ext4 /home)
 2. Make updates & upgrades after installation
     - `sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo aptitude safe-upgrade`
+    - `sudo mintupdate-cli upgrade -r -y --install-recommends` - [-r] - refresh apt cache, [-y] - yes
     - Upgrade Linux via Update Manager (Linux kernel)
 3. Install VirtualBox guests additions
     - Insert Guests Addition Image CD
