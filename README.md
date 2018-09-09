@@ -50,7 +50,7 @@ sudo apt install -y i3 i3blocks i3lock-fancy i3status rofi
 # sudo apt install -y fonts-inconsolata
 sudo apt install -y fonts-powerline ttf-mscorefonts-installer
 # sudo apt install -y lxappearance    # Then set a font to Ubuntu Light 8
-sudo apt install -y git tig vim taskwarrior ripgrep
+sudo apt install -y git tig vim taskwarrior
 
 # Google Chrome
 cd ~/Downloads
