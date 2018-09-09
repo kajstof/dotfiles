@@ -55,20 +55,23 @@ set encoding=utf8
 set number          " or nu
 set relativenumber  " or rnu
 
-if has('win32')
+
+if has("gui_running")
     " Set size for gVim
     set lines=50
     set columns=143
-
-    set guifont=Ubuntu_Mono_derivative_Powerlin:h11
-    "set guifont=DejaVu_Sans_Mono_for_Powerline:h9
 
     "set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
     set guioptions-=L  "remove left-hand scroll bar
-else
-    set guifont=Ubuntu_Mono:h10
+
+    if has('win32')
+        set guifont=Ubuntu_Mono_derivative_Powerlin:h11
+        "set guifont=DejaVu_Sans_Mono_for_Powerline:h9
+    else
+        set guifont=Ubuntu\ Mono\ 11
+    endif
 endif
 
 set noswapfile
