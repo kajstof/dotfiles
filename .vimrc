@@ -90,20 +90,22 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins tested
 Plugin 'morhetz/gruvbox'
+Plugin 'dracula/vim'
+Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'airblade/vim-gitgutter'
 
 " Plugins to test
 "Plugin 'tpope/vim-commentary'
 "Plugin 'tpope/vim-surround'
 "Plugin 'pangloss/vim-javascript'
-"Plugin 'vim-syntastic/syntastic'
 "Plugin 'neomake/neomake'
-"Plugin 'Xuyuanp/nerdtree-git-plugin'
-"Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
