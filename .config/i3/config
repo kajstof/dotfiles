@@ -139,10 +139,10 @@ mode "resize" {
     bindsym semicolon resize grow width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
+    bindsym Left resize shrink width 1 px or 1 ppt
+    bindsym Down resize grow height 1 px or 1 ppt
+    bindsym Up resize shrink height 1 px or 1 ppt
+    bindsym Right resize grow width 1 px or 1 ppt
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -157,3 +157,22 @@ bar {
     position top
     status_command i3status
 }
+
+# Border & titlebar
+new_window normal
+hide_edge_borders vertical
+bindsym $mod+Control+x [class="^.*"] border toggle
+for_window [class="Google-chrome"] borderpixel 2
+#assign [class="Google-chrome" window_role="browser"] 6: Chrome
+for_window [class="Firefox"] border pixel 2
+#assign [class="Firefox" window_role="browser"] 5: Firefox
+#for_window [class="^.*"] border pixel 1
+#for_window [class="URxvt"] border normal
+#for_window [class="Leafpad"] border normal
+#for_window [class="Lxappearance"] border normal
+#for_window [class="Vlc"] border pixel 0
+#for_window [class="mpv"] border pixel 0
+#for_window [class="Pcmanfm"] border pixel 0
+#for_window [class="Geary"] border pixel 0
+#for_window [class="Lmms"] border pixel 0
+#for_window [class="Feh"] border pixel 0
