@@ -98,12 +98,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-syntastic/syntastic'
 
 " Plugins to test
-"Plugin 'tpope/vim-commentary'
-"Plugin 'tpope/vim-surround'
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'neomake/neomake'
 
