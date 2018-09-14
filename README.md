@@ -5,7 +5,7 @@
 1. Clone dotfiles to $HOME directory
 
 ```sh
-git clone https://github.com/kajstof/dotfiles ~
+git clone https://github.com/kajstof/dotfiles ~/dotfiles
 ```
 
 2. Add file `~/.vimrc` with content:
