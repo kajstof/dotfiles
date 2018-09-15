@@ -103,6 +103,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " Plugins to test
 "Plugin 'pangloss/vim-javascript'
@@ -132,6 +134,23 @@ let g:airline#extensions#tabline#enabled=1
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " Set colorscheme
 colorscheme darkblue    " hack for dark gruvbox scheme (@TODO fix)
