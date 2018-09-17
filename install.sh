@@ -56,3 +56,17 @@ V=$(lsb_release -cs)
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu ${V} stable"
 sudo apt update
 sudo apt install -y docker-ce
+
+# Python PIP
+#curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+#python get-pip.py
+sudo apt install -y python3-pip
+
+# AWS CLI
+pip install awscli --upgrade --user
+
+# GCP CLI
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update && sudo apt-get install google-cloud-sdk
