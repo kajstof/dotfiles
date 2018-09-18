@@ -68,7 +68,21 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  aws
+  kubectl
+  npm
+  ng
+  pip
+  python
+  rsync
+  sudo
+  taskwarrior
+  zsh-completions
 )
+
+autoload -U compinit && compinit
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $ZSH/oh-my-zsh.sh
 
