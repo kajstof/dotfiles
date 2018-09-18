@@ -45,12 +45,12 @@ mkdir -p ~/Tools
 
 # Apps installation
 sudo apt install -y build-essential linux-headers-generic ssh xclip zsh
-sudo apt install -y python nodejs
+sudo apt install -y python python3 python-pip python3-pip nodejs npm
 sudo apt install -y i3 i3blocks i3lock-fancy i3status rofi
-# sudo apt install -y fonts-inconsolata
 sudo apt install -y fonts-powerline ttf-mscorefonts-installer
-# sudo apt install -y lxappearance    # Then set a font to Ubuntu Light 8
+sudo apt install -y lxappearance                # Then set a font to Ubuntu Regular 9
 sudo apt install -y git tig vim taskwarrior
+# sudo apt install -y fonts-inconsolata
 
 # Google Chrome
 cd ~/Downloads
@@ -99,11 +99,6 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 sudo apt install -y docker-ce
 
-# Python PIP
-#curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-#python get-pip.py
-sudo apt install -y python3-pip
-
 # AWS CLI
 pip install awscli --upgrade --user
 
@@ -112,6 +107,10 @@ export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install google-cloud-sdk
+
+# Other tools
+pip install setuptools
+pip install locust
 ```
 
 6. Configure environment
