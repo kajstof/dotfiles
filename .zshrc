@@ -67,22 +67,22 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  # aws
   git
-  aws
-  kubectl
-  npm
-  ng
-  pip
-  python
-  rsync
+  # kubectl
+  # ng
+  # npm
+  # pip
+  # python
+  # rsync
   sudo
-  taskwarrior
-  zsh-completions
+  # taskwarrior
+  z
+  zsh-autosuggestions
+  # zsh-completions
 )
 
 autoload -U compinit && compinit
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,3 +114,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+source ~/.zplug/init.zsh
+
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+zplug zsh-users/zsh-autosuggestions, from:github, as:plugin
+zplug load
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "/home/$USER/Tools/google-cloud-sdk/path.zsh.inc" ]; then source "/home/$USER/Tools/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "/home/$USER/Tools/google-cloud-sdk/completion.zsh.inc" ]; then source "/home/$USER/Tools/google-cloud-sdk/completion.zsh.inc"; fi
