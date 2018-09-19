@@ -182,3 +182,6 @@ for_window [class="Firefox"] border pixel 2
 #for_window [class="Geary"] border pixel 0
 #for_window [class="Lmms"] border pixel 0
 #for_window [class="Feh"] border pixel 0
+
+# Background
+exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/64.jpg
