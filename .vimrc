@@ -153,7 +153,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Set colorscheme
-colorscheme darkblue    " hack for dark gruvbox scheme (@TODO fix)
+"set background=dark
 colorscheme gruvbox
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
