@@ -2,19 +2,34 @@
 
 ## Windows
 
-1. Clone dotfiles to $HOME directory
+1. Install choco and then run (in powershell):
+
+```cmd
+choco install 7zip autohotkey cmder cpu-z git golang keepassxc mingw nodejs python -y
+```
+
+2. Install gvim
+3. Install Python3.6-32 and add it to PATH
+4. Install DejaVuSansMono and Ubuntu Mono derivative font for powerline: [GitHub - powerline/fonts: Patched fonts for Powerline users.](https://github.com/powerline/fonts)
+5. Clone Vundle for vim:
+
+```sh
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+6. Clone dotfiles to $HOME directory
 
 ```sh
 git clone https://github.com/kajstof/dotfiles ~/dotfiles
 ```
 
-2. Install gVim and add symbolic link to `dotfiles/.vimrc`:
+7. Add symbolic link to `dotfiles/.vimrc` (use cmd):
 
 ```cmd
 mklink %USERPROFILE%\.vimrc %USERPROFILE%\dotfiles\.vimrc
 ```
 
-3. Install cmder to `C:\tools\cmder` and run commands in cmd:
+8. Add symbolic link to cmder config files (use cmd):
 
 ```cmd
 mklink C:\tools\cmder\config\user-ConEmu.xml %USERPROFILE%\dotfiles\cmder\config\user-ConEmu.xml
