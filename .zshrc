@@ -124,6 +124,8 @@ zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+if [ -f "/home/$USER/.local/bin/aws_zsh_completer.sh" ]; then source "/home/$USER/.local/bin/aws_zsh_completer.sh"; fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "/home/$USER/Tools/google-cloud-sdk/path.zsh.inc" ]; then source "/home/$USER/Tools/google-cloud-sdk/path.zsh.inc"; fi
 

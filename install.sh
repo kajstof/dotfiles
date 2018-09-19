@@ -70,6 +70,11 @@ export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install google-cloud-sdk
+cd ~/Tools
+wget -q https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-217.0.0-linux-x86_64.tar.gz
+tar zxvf google-cloud-sdk-217.0.0-linux-x86_64.tar.gz google-cloud-sdk
+rm google-cloud-sdk-217.0.0-linux-x86_64.tar.gz
+cd ~
 
 # Other tools
 pip install setuptools
