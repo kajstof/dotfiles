@@ -236,3 +236,7 @@ cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 - DotNet Core
 - Python
 - NodeJS
+
+## Mostly inspired by
+
+[GitHub - michal-franc/dotfiles: Messy dotfiles - WIP](https://github.com/michal-franc/dotfiles)
