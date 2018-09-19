@@ -72,6 +72,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Zplug
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 # DotNet Core
 cd ~/Tools
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
