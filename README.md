@@ -148,16 +148,29 @@ vim +PluginInstall +qall
 
 # Set zsh as default shell
 sudo chsh -s /bin/zsh root
+sudo chsh -s /bin/zsh "$USER"
+
+# Zplug installation
+zplug install
 
 # Add user to docker group. Added user can run docker command without sudo command
 sudo gpasswd -a "${USER}" docker
 
-read -r -p "Do you want to restart computer? [y/n] " response
-response=${response,,}    # tolower
-if [[ "$response" =~ ^(yes|y)$ ]]
-then
-    sudo reboot
-fi
+confirm() {
+    # call with a prompt string or use a default
+    read -r -p "${1:-Are you sure? [y/N]} " response
+    case "$response" in
+        [yY][eE][sS]|[yY])
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+# Reboot system
+confirm "Do you want to restart computer? [y/N]" && sudo reboot
 ```
 
 ## Useful stuff

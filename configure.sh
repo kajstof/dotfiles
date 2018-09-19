@@ -21,6 +21,10 @@ vim +PluginInstall +qall
 
 # Set zsh as default shell
 sudo chsh -s /bin/zsh root
+sudo chsh -s /bin/zsh "$USER"
+
+# Zplug installation
+zplug install
 
 # Add user to docker group. Added user can run docker command without sudo command
 sudo gpasswd -a "${USER}" docker
