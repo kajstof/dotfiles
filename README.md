@@ -8,10 +8,18 @@
 git clone https://github.com/kajstof/dotfiles ~/dotfiles
 ```
 
-2. Add file `~/.vimrc` with content:
+2. Install gVim and add symbolic link to `dotfiles/.vimrc`:
 
-```vim
-source ~/dotfiles/.vimrc
+```cmd
+mklink %USERPROFILE%\.vimrc %USERPROFILE%\dotfiles\.vimrc
+```
+
+3. Install cmder to `C:\tools\cmder` and run commands in cmd:
+
+```cmd
+mklink C:\tools\cmder\config\user-ConEmu.xml %USERPROFILE%\dotfiles\cmder\config\user-ConEmu.xml
+mklink C:\tools\cmder\config\settings %USERPROFILE%\dotfiles\cmder\config\settings
+mklink C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml %USERPROFILE%\dotfiles\cmder\vendor\conemu-maximus5\ConEmu.xml
 ```
 
 ## Linux Mint on VirtualBox
