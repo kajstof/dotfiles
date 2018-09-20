@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-09-19 20:11:18" build="180206">
+		<key name=".Vanilla" modified="2018-09-20 06:33:20" build="180528">
 			<value name="ColorTable00" type="dword" data="0036342e"/>
 			<value name="ColorTable01" type="dword" data="00a46534"/>
 			<value name="ColorTable02" type="dword" data="00069a4e"/>
@@ -110,8 +110,8 @@
 			<value name="FontItalic" type="hex" data="00"/>
 			<value name="Monospace" type="hex" data="01"/>
 			<value name="BackGround Image show" type="hex" data="01"/>
-			<value name="BackGround Image" type="string" data="%ConEmuDir%\Colorful-Galaxy-Photos.jpg"/>
-			<value name="bgImageDarker" type="hex" data="1E"/>
+			<value name="BackGround Image" type="string" data="C:\Users\krysi\dotfiles\cropped-1920-1080-527241.jpg"/>
+			<value name="bgImageDarker" type="hex" data="32"/>
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
 			<value name="bgOperation" type="hex" data="07"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
@@ -122,12 +122,12 @@
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="00000083"/>
-			<value name="ConWnd Height" type="dword" data="0000002e"/>
+			<value name="WindowMode" type="dword" data="00000520"/>
+			<value name="ConWnd Width" type="dword" data="00000072"/>
+			<value name="ConWnd Height" type="dword" data="0000001a"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="-1102"/>
-			<value name="ConWnd Y" type="long" data="0"/>
+			<value name="ConWnd X" type="long" data="419"/>
+			<value name="ConWnd Y" type="long" data="-21"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -879,7 +879,7 @@
 			</key>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
-			<value name="LastMonitor" type="string" data="-1280,0,0,1024"/>
+			<value name="LastMonitor" type="string" data="62,0,1920,1080"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="EnvironmentSet" type="multi">
