@@ -26,15 +26,20 @@ git clone https://github.com/kajstof/dotfiles ~/dotfiles
 7. Add symbolic link to `dotfiles/.vimrc` (use cmd):
 
 ```cmd
-mklink %USERPROFILE%\.vimrc %USERPROFILE%\dotfiles\.vimrc
+rm %userprofile%\.vimrc
+mklink %userprofile%\.vimrc %userprofile%\dotfiles\.vimrc
 ```
 
 8. Add symbolic link to cmder config files (use cmd):
 
 ```cmd
-mklink C:\tools\cmder\config\user-ConEmu.xml %USERPROFILE%\dotfiles\cmder\config\user-ConEmu.xml
-mklink C:\tools\cmder\config\settings %USERPROFILE%\dotfiles\cmder\config\settings
-mklink C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml %USERPROFILE%\dotfiles\cmder\vendor\conemu-maximus5\ConEmu.xml
+rm C:\tools\cmder\config\user-ConEmu.xml
+rm C:\tools\cmder\config\settings
+rm C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml
+
+mklink C:\tools\cmder\config\user-ConEmu.xml %userprofile%\dotfiles\cmder\config\user-ConEmu.xml
+mklink C:\tools\cmder\config\settings %userprofile%\dotfiles\cmder\config\settings
+mklink C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml %userprofile%\dotfiles\cmder\vendor\conemu-maximus5\ConEmu.xml
 ```
 
 ## Linux Mint on VirtualBox
