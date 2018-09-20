@@ -184,4 +184,4 @@ for_window [class="Firefox"] border pixel 2
 #for_window [class="Feh"] border pixel 0
 
 # Background
-exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/64.jpg
+exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/64.jpg
