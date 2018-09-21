@@ -105,6 +105,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'edkolev/tmuxline.vim'
 
 " Plugins to test
 "Plugin 'pangloss/vim-javascript'
