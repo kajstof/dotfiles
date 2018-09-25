@@ -1,6 +1,9 @@
 " Set language to english (gVim)
 set langmenu=en_US.utf8
 
+" System clipboard (Windows)
+set clipboard=unnamed,unnamedplus
+
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
