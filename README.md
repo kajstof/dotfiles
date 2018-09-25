@@ -42,6 +42,8 @@ mklink C:\tools\cmder\config\settings %userprofile%\dotfiles\cmder\config\settin
 mklink C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml %userprofile%\dotfiles\cmder\vendor\conemu-maximus5\ConEmu.xml
 ```
 
+9. Change default keyboard repeat rate values in registry: `keyboard_fast.reg`, (default values - `keyboard_default.reg`)
+
 ## Linux Mint on VirtualBox
 
 1. Install Linux Mint (Xfce edition) on VirtualBox
