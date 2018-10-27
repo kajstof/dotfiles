@@ -74,7 +74,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/kajstof/dotfiles/master/in
 mkdir -p ~/Tools
 
 # Apps installation
-sudo apt install -y build-essential linux-headers-generic ssh xclip zsh
+sudo apt install -y build-essential linux-headers-generic ssh xclip zsh feh
 sudo apt install -y python python3 python-pip python3-pip nodejs npm
 sudo apt install -y i3 i3blocks i3lock-fancy i3status rofi
 sudo apt install -y fonts-powerline ttf-mscorefonts-installer

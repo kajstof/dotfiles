@@ -168,9 +168,9 @@ bar {
 new_window normal
 hide_edge_borders vertical
 bindsym $mod+Control+x [class="^.*"] border toggle
-for_window [class="Google-chrome"] borderpixel 2
+for_window [class="Google-chrome"] borderpixel 1
 #assign [class="Google-chrome" window_role="browser"] 6: Chrome
-for_window [class="Firefox"] border pixel 2
+for_window [class="Firefox"] border pixel 1
 #assign [class="Firefox" window_role="browser"] 5: Firefox
 #for_window [class="^.*"] border pixel 1
 #for_window [class="URxvt"] border normal
