@@ -146,6 +146,18 @@ sudo apt-get update && sudo apt-get install google-cloud-sdk
 # Other tools
 pip install setuptools
 pip install locust
+
+# Themes
+
+# Paper icon theme
+sudo add-apt-repository ppa:snwh/ppa
+sudo apt update
+sudo apt install paper-icon-theme
+
+# Papirus icon theme
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt update
+sudo apt install papirus-icon-theme
 ```
 
 6. Configure environment
