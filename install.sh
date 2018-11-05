@@ -30,6 +30,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Zplug
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
+# Playerctl (media control for i3wm)
+cd ~/Tools
+wget http://ftp.de.debian.org/debian/pool/main/p/playerctl/libplayerctl-1.0-0_0.6.1-1.1_amd64.deb
+wget http://ftp.de.debian.org/debian/pool/main/p/playerctl/playerctl_0.6.1-1.1_amd64.deb
+sudo dpkg -i libplayerctl-1.0-0_0.6.1-1.1_amd64.deb playerctl_0.6.1-1.1_amd64.deb
+rm libplayerctl-1.0-0_0.6.1-1.1_amd64.deb playerctl_0.6.1-1.1_amd64.deb
+cd ~
+
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
