@@ -94,29 +94,41 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+set $workspace01 "1: Firefox"
+set $workspace02 2
+set $workspace03 "3: Terminals"
+set $workspace04 4
+set $workspace05 5
+set $workspace06 "6: VsCode"
+set $workspace07 "7: Rider"
+set $workspace08 "8: Chrome"
+set $workspace09 "9: Vlc"
+set $workspace10 "10: Rhytmbox"
+
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $workspace01
+bindsym $mod+2 workspace $workspace02
+bindsym $mod+3 workspace $workspace03
+bindsym $mod+4 workspace $workspace04
+bindsym $mod+5 workspace $workspace05
+bindsym $mod+6 workspace $workspace06
+bindsym $mod+7 workspace $workspace07
+bindsym $mod+8 workspace $workspace08
+bindsym $mod+9 workspace $workspace09
+bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $workspace01
+bindsym $mod+Shift+2 move container to workspace $workspace02
+bindsym $mod+Shift+3 move container to workspace $workspace03
+bindsym $mod+Shift+4 move container to workspace $workspace04
+bindsym $mod+Shift+5 move container to workspace $workspace05
+bindsym $mod+Shift+6 move container to workspace $workspace06
+bindsym $mod+Shift+7 move container to workspace $workspace07
+bindsym $mod+Shift+8 move container to workspace $workspace08
+bindsym $mod+Shift+9 move container to workspace $workspace09
+bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -168,20 +180,23 @@ bar {
 new_window normal
 hide_edge_borders vertical
 bindsym $mod+Control+x [class="^.*"] border toggle
-for_window [class="Google-chrome"] borderpixel 1
-#assign [class="Google-chrome" window_role="browser"] 6: Chrome
-for_window [class="Firefox"] border pixel 1
-#assign [class="Firefox" window_role="browser"] 5: Firefox
+for_window [class="Google-chrome"] border pixel 0
+assign [class="Google-chrome" window_role="browser"] $workspace08
+for_window [class="Firefox"] border pixel 0
+assign [class="Firefox" window_role="browser"] $workspace01
 #for_window [class="^.*"] border pixel 1
 #for_window [class="URxvt"] border normal
 #for_window [class="Leafpad"] border normal
 #for_window [class="Lxappearance"] border normal
-#for_window [class="Vlc"] border pixel 0
+for_window [class="Vlc"] border pixel 0
+assign [class="Vlc"] $workspace03
 #for_window [class="mpv"] border pixel 0
 #for_window [class="Pcmanfm"] border pixel 0
 #for_window [class="Geary"] border pixel 0
 #for_window [class="Lmms"] border pixel 0
 #for_window [class="Feh"] border pixel 0
+for_window [class="Code"] border pixel 0
+assign [class="Code"] $workspace06
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -203,6 +218,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Lock screen
 bindsym $mod+shift+x exec i3lock
+
+# Monitor configuration (for desktop pc)
+#exec --no-startup-id xrandr --output HDMI-0 --off --output DVI-I-1 --mode 1280x1024 --pos 1920x0 --rotate normal --output DVI-I-0 --off --output DVI-I-3 --off --output DVI-I-2 --mode 1920x1080 --pos 3200x0 --rotate normal 
 
 # Background
 exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/64.jpg
