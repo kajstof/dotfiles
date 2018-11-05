@@ -158,6 +158,12 @@ sudo apt install paper-icon-theme
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt update
 sudo apt install papirus-icon-theme
+
+# Breeze icon theme
+sudo apt install breeze-icon-theme
+
+# Breeze cursor theme
+sudo apt install breeze-cursor-theme
 ```
 
 6. Configure environment
