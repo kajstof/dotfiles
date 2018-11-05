@@ -94,14 +94,14 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace01 "1: Firefox"
+set $workspace01 "1:  Firefox"
 set $workspace02 2
-set $workspace03 "3: Terminals"
+set $workspace03 "3:  Terminals"
 set $workspace04 4
 set $workspace05 5
-set $workspace06 "6: VsCode"
-set $workspace07 "7: Rider"
-set $workspace08 "8: Chrome"
+set $workspace06 "6:  VsCode"
+set $workspace07 "7:  Rider"
+set $workspace08 "8:  Chrome"
 set $workspace09 "9: Vlc"
 set $workspace10 "10: Rhytmbox"
 
