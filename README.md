@@ -158,20 +158,21 @@ pip install locust
 # Themes
 
 # Paper icon theme
-sudo add-apt-repository ppa:snwh/ppa
+sudo add-apt-repository -y ppa:snwh/ppa
 sudo apt update
-sudo apt install paper-icon-theme
+sudo apt install -y paper-icon-theme
 
 # Papirus icon theme
-sudo add-apt-repository ppa:papirus/papirus
+sudo add-apt-repository -y ppa:papirus/papirus
 sudo apt update
-sudo apt install papirus-icon-theme
+sudo apt install -y papirus-icon-theme
 
 # Breeze icon theme
-sudo apt install breeze-icon-theme
+sudo apt install -y breeze-icon-theme
 
 # Breeze cursor theme
-sudo apt install breeze-cursor-theme
+sudo apt install -y breeze-cursor-theme
+# Paper icon theme
 ```
 
 6. Configure environment
