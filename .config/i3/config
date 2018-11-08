@@ -95,15 +95,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace01 "1:  Firefox"
-set $workspace02 2
-set $workspace03 "3:  Terminals"
+set $workspace02 "2:  Terminals"
+set $workspace03 3
 set $workspace04 4
-set $workspace05 5
-set $workspace06 "6:  VsCode"
-set $workspace07 "7:  Rider"
-set $workspace08 "8:  Chrome"
-set $workspace09 "9: Vlc"
-set $workspace10 "10: Rhytmbox"
+set $workspace05 "5:  VsCode"
+set $workspace06 "6:  Rider"
+set $workspace07 "7:  Chrome"
+set $workspace08 "8:  Opera"
+set $workspace09 "9:  Vlc"
+set $workspace10 "10:  Rhytmbox"
 
 
 # switch to workspace
@@ -202,23 +202,26 @@ bar {
 new_window normal
 hide_edge_borders smart
 bindsym $mod+Control+x [class="^.*"] border toggle
-for_window [class="Google-chrome"] border pixel 0
-assign [class="Google-chrome" window_role="browser"] $workspace08
-for_window [class="Firefox"] border pixel 0
-assign [class="Firefox" window_role="browser"] $workspace01
 #for_window [class="^.*"] border pixel 1
 #for_window [class="URxvt"] border normal
 #for_window [class="Leafpad"] border normal
 #for_window [class="Lxappearance"] border normal
-for_window [class="Vlc"] border pixel 0
-assign [class="Vlc"] $workspace03
 #for_window [class="mpv"] border pixel 0
 #for_window [class="Pcmanfm"] border pixel 0
 #for_window [class="Geary"] border pixel 0
 #for_window [class="Lmms"] border pixel 0
 #for_window [class="Feh"] border pixel 0
+for_window [class="Firefox"] border pixel 0
+assign [class="Firefox" window_role="browser"] $workspace01
 for_window [class="Code"] border pixel 0
-assign [class="Code"] $workspace06
+assign [class="Code"] $workspace05
+for_window [class="Google-chrome"] border pixel 0
+assign [class="Google-chrome" window_role="browser"] $workspace07
+for_window [class="Opera"] border pixel 0
+assign [class="Opera" window_role="browser"] $workspace08
+for_window [class="Vlc"] border pixel 0
+assign [class="Vlc"] $workspace09
+assign [class="Rhytmbox"] $workspace10
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
