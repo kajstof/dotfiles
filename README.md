@@ -270,6 +270,15 @@ cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 - DotNet Core
 - Python
 - NodeJS
+- Rider
+
+### Other stuff
+
+Set RTC in local TimeZone - for dual-boot (e.g. with Windows)
+
+```sh
+timedatectl set-local-rtc true
+```
 
 ## Mostly inspired by
 
