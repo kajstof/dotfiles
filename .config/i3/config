@@ -186,7 +186,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 # }
 
 bar {
-    position bottom
+    position top
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     colors {
         background $bg-color
