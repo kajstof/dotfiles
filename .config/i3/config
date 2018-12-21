@@ -219,7 +219,7 @@ assign [class="Firefox" window_role="browser"] $workspace01
 assign [class="Code"] $workspace05
 assign [class="jetbrains-rider"] $workspace06
 assign [class="Google-chrome" window_role="browser"] $workspace07
-assign [class="Opera" window_role="browser"] $workspace08
+assign [class="Opera"] $workspace08
 assign [class="Vlc"] $workspace09
 assign [class="Rhytmbox"] $workspace10
 
