@@ -1,3 +1,4 @@
 rofi.theme: onedark
 rofi.sidebar-mode: true
+rofi.combi-modi: window,drun
 rofi.show-icons: true
