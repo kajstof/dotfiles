@@ -92,9 +92,12 @@ call vundle#begin('~/.vim/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins tested
-Plugin 'morhetz/gruvbox'
-Plugin 'dracula/vim'
-Plugin 'tomasr/molokai'
+" Color schemes
+Plugin 'joshdick/onedark.vim'
+"Plugin 'morhetz/gruvbox'
+"Plugin 'dracula/vim'
+"Plugin 'tomasr/molokai'
+" Rest
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
@@ -158,7 +161,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Set colorscheme
 set background=dark
-colorscheme gruvbox
+colorscheme onedark
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
