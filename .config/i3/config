@@ -185,18 +185,20 @@ client.urgent           $urgent-bg-color   $urgent-bg-color     $text-color     
 #     status_command i3status
 # }
 
-bar {
-    position top
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    colors {
-        background $bg-color
-        separator $separator-color
-        #                  border             backgorund           text
-        focused_workspace  $bg-color          $bg-color           $text-color
-        inactive_workspace $inactive-bg-color $bg-color           $inactive-text-color
-        focused_workspace  $urgent-bg-color   $bg-color           $text-color
-    }
-}
+# bar {
+#     position top
+#     status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#     colors {
+#         background $bg-color
+#         separator $separator-color
+#         #                  border             backgorund           text
+#         focused_workspace  $bg-color          $bg-color           $text-color
+#         inactive_workspace $inactive-bg-color $bg-color           $inactive-text-color
+#         focused_workspace  $urgent-bg-color   $bg-color           $text-color
+#     }
+# }
+
+exec_always --no-startup-id killall polybar; polybar -c ~/.config/polybar/config example
 
 # Border & titlebar
 new_window normal
