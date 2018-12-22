@@ -82,6 +82,26 @@ sudo apt install -y feh git tig tmux vim vim-gtk taskwarrior
 sudo apt install -y lxappearance                # Then set a font to Ubuntu Regular 9
 # sudo apt install -y fonts-inconsolata
 
+# i3-gaps
+cd ~/Tools
+
+# clone the repository
+git clone https://www.github.com/Airblader/i3 i3-gaps
+cd i3-gaps
+
+# compile & install
+autoreconf --force --install
+rm -rf build/
+mkdir -p build && cd build/
+
+# Disabling sanitizers is important for release versions!
+# The prefix and sysconfdir are, obviously, dependent on the distribution.
+../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+make
+sudo make install
+
+rm ~/Tools/i3-gaps/ -rf
+
 # Google Chrome
 cd ~/Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -172,7 +192,6 @@ sudo apt install -y breeze-icon-theme
 
 # Breeze cursor theme
 sudo apt install -y breeze-cursor-theme
-# Paper icon theme
 ```
 
 6. Configure environment
