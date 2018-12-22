@@ -246,7 +246,7 @@ bindsym $mod+shift+x exec i3lock-fancy
 
 # i3gaps
 gaps inner 8
-smart_gaps inverse_outer
+smart_gaps on
 
 # workspace 01 gaps inner 75
 
