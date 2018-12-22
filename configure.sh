@@ -6,7 +6,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # My config files configuration
 git clone https://github.com/kajstof/dotfiles ~/dotfiles
-rm -rf ~/.profile ~/.zshrc ~/.vimrc ~/.Xresources ~/.config/fontconfig ~/.config/i3 ~/.config/rofi ~/.config/termite
+rm -rf ~/.profile ~/.zshrc ~/.vimrc ~/.Xresources ~/.config/fontconfig ~/.config/i3 ~/.config/rofi ~/.config/polybar ~/.config/termite
 ln -s ~/dotfiles/.profile ~/.profile
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
@@ -14,6 +14,7 @@ ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.config/fontconfig ~/.config/fontconfig
 ln -s ~/dotfiles/.config/i3 ~/.config/i3
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
+ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/termite ~/.config/termite
 
 # Vim plugins installation
