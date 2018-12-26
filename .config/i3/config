@@ -216,7 +216,7 @@ for_window [class="^.*"] border pixel 1
 #for_window [class="Feh"] border pixel 0
 
 assign [class="Termite"] $workspace02
-assign [class="X-terminal-emulator"] $workspace02
+#assign [class="X-terminal-emulator"] $workspace02
 assign [class="Firefox" window_role="browser"] $workspace01
 assign [class="Code"] $workspace05
 assign [class="jetbrains-rider"] $workspace06
