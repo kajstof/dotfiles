@@ -170,6 +170,13 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 sudo apt install -y docker-ce
 
+# Dive
+cd ~/Tools
+wget https://github.com/wagoodman/dive/releases/download/v0.6.0/dive_0.6.0_linux_amd64.deb
+sudo apt install ./dive_0.6.0_linux_amd64.deb
+rm dive_0.6.0_linux_amd64.deb
+cd ~
+
 # AWS CLI
 # pip install awscli --upgrade --user
 pip3 install awscli --upgrade --user
