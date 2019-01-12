@@ -39,7 +39,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 3
 line-color = #f00
 
 border-size = 0
@@ -84,7 +84,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title%
+label = %title:0:120:...%
 ;label = %title:0:30:...%
 
 [module/xkeyboard]
@@ -151,9 +151,9 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 ;label-focused = %index%
-label-focused = %name%
+label-focused = %{F#ffb52a}%name%%{F-}
 label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-underline = #ff0000
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
@@ -162,8 +162,8 @@ label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+label-visible-background = ${module/bspwm.label-focused-background}
+label-visible-underline = ${module/bspwm.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
