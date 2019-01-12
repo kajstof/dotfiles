@@ -6,7 +6,7 @@ sudo apt install -y build-essential linux-headers-generic ssh xclip zsh feh
 sudo apt install -y python python3 python-pip python3-pip nodejs npm
 sudo apt install -y i3 i3blocks i3lock-fancy i3status rofi
 sudo apt install -y fonts-powerline ttf-mscorefonts-installer
-sudo apt install -y feh git tig tmux vim vim-gtk ranger taskwarrior
+sudo apt install -y feh git tig tmux vim vim-gtk ranger vifm taskwarrior zathura
 sudo apt install -y libxcb-ewmh-dev python-xcbgen xcb-proto cmake
 sudo apt install -y lxappearance                # Then set a font to Ubuntu Regular 9
 # sudo apt install -y fonts-inconsolata
