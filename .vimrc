@@ -60,16 +60,16 @@ set relativenumber  " or rnu
 
 
 if has("gui_running")
-    " Set size for gVim
-    set lines=50
-    set columns=143
-
     "set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
     set guioptions-=L  "remove left-hand scroll bar
 
     if has('win32')
+        " Set size for gVim
+        set lines=50
+        set columns=143
+
         set guifont=Ubuntu_Mono_derivative_Powerlin:h11
         "set guifont=DejaVu_Sans_Mono_for_Powerline:h9
     else
@@ -93,10 +93,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins tested
 " Color schemes
-Plugin 'joshdick/onedark.vim'
+"Plugin 'joshdick/onedark.vim'
 "Plugin 'morhetz/gruvbox'
 "Plugin 'dracula/vim'
-"Plugin 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 " Rest
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -139,8 +139,9 @@ let g:airline_powerline_fonts=1
 
 let g:airline#extensions#tabline#enabled=1
 
-" Show hidden files in NERDTree
+" Show hidden files and bookmarks in NERDTree
 let NERDTreeShowHidden=1
+let NERDTreeShowBookmarks=1
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -161,9 +162,11 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Set colorscheme
 set background=dark
-colorscheme onedark
+colorscheme molokai
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
 map Y y$
+map <C-r> :source $MYVIMRC<CR>
 map <C-n> :NERDTreeToggle<CR>
+map <C-s> :GitGutterLineHighlightsToggle<CR>
