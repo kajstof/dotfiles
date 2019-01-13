@@ -198,6 +198,9 @@ client.urgent           $urgent-bg-color   $urgent-bg-color     $text-color     
 #     }
 # }
 
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Border & titlebar
