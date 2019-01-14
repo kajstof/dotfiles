@@ -324,6 +324,15 @@ Set RTC in local TimeZone - for dual-boot (e.g. with Windows)
 timedatectl set-local-rtc true
 ```
 
+Set touchpad settings
+
+```sh
+xinput --list
+xinput list-props 15
+xinput set-prop 15 302 1    # Tapping
+xinput set-prop 15 284 1    # Natural scrolling
+```
+
 ## Mostly inspired by
 
 [GitHub - michal-franc/dotfiles: Messy dotfiles - WIP](https://github.com/michal-franc/dotfiles)
