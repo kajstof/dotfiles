@@ -260,3 +260,6 @@ smart_gaps on
 
 # Background
 exec --no-startup-id /usr/bin/feh --bg-scale ~/dotfiles/wallpapers/64.jpg
+
+# Dell Touchpad
+#exec sh ~/dotfiles/scripts/dell_touchpad.sh
