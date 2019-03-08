@@ -111,6 +111,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'vimwiki/vimwiki'
 
 " Plugins to test
 "Plugin 'edkolev/tmuxline.vim'
