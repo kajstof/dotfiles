@@ -8,7 +8,7 @@ set clipboard=unnamed,unnamedplus
 set nocompatible
 
 " Enable syntax highlighting
-syntax on
+"syntax on
 
 " Better command-line completion
 set wildmenu
@@ -79,60 +79,46 @@ endif
 
 set noswapfile
 
-filetype off                  " required
+set rtp+=~/.vim
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=$HOME/.vim/bundle/Vundle.vim/
-"call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-call vundle#begin('~/.vim/bundle/')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Color schemes
+Plug 'tomasr/molokai'
+"Plug 'joshdick/onedark.vim'
+"Plug 'morhetz/gruvbox'
+"Plug 'dracula/vim'
 
 " Plugins tested
-" Color schemes
-"Plugin 'joshdick/onedark.vim'
-"Plugin 'morhetz/gruvbox'
-"Plugin 'dracula/vim'
-Plugin 'tomasr/molokai'
-" Rest
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'vimwiki/vimwiki'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'honza/vim-snippets'
+Plug 'leafgarland/typescript-vim'
+Plug 'vimwiki/vimwiki'
+
+" Plugins under test
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'SirVer/ultisnips'
 
 " Plugins to test
-"Plugin 'edkolev/tmuxline.vim'
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'neomake/neomake'
+"Plug 'junegunn/fzf.vim'
+"Plug 'edkolev/tmuxline.vim'
+"Plug 'pangloss/vim-javascript'
+"Plug 'neomake/neomake'
+"Plug 'majutsushi/tagbar'
+"Plug 'godlygeek/tabular'
+"Plug 'ervandew/supertab'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()
+
+filetype plugin indent on
 
 "Airline setting theme
 let g:airline_theme='powerlineish'

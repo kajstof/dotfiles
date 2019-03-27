@@ -232,8 +232,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/kajstof/dotfiles/master/co
 # Add 'git lg' alias
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-# Add Vundle to vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Add vim-plug to Vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # My config files configuration
 git clone https://github.com/kajstof/dotfiles ~/dotfiles
@@ -249,7 +249,7 @@ ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/termite ~/.config/termite
 
 # Vim plugins installation
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 
 # Set zsh as default shell
 sudo chsh -s /bin/zsh root
