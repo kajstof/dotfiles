@@ -94,13 +94,13 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace01 "1:  Firefox"
-set $workspace02 "2:  Terminals"
-set $workspace03 3
-set $workspace04 4
-set $workspace05 "5:  VsCode"
-set $workspace06 "6:  Rider"
-set $workspace07 "7:  Chrome"
+set $workspace01 "1:  Common"
+set $workspace02 2
+set $workspace03 "3:  Terminals"
+set $workspace04 "4:  VsCode"
+set $workspace05 "5:  Rider"
+set $workspace06 "6:  Chrome"
+set $workspace07 "7:  Firefox"
 set $workspace08 "8:  Opera"
 set $workspace09 "9:  Vlc"
 set $workspace10 "10:  Rhytmbox"
@@ -218,12 +218,12 @@ for_window [class="^.*"] border pixel 1
 #for_window [class="Lmms"] border pixel 0
 #for_window [class="Feh"] border pixel 0
 
-assign [class="Termite"] $workspace02
-#assign [class="X-terminal-emulator"] $workspace02
-assign [class="Firefox" window_role="browser"] $workspace01
-assign [class="Code"] $workspace05
-assign [class="jetbrains-rider"] $workspace06
-assign [class="Google-chrome" window_role="browser"] $workspace07
+#assign [class="X-terminal-emulator"] $workspace03
+assign [class="Termite"] $workspace03
+assign [class="Code"] $workspace04
+assign [class="jetbrains-rider"] $workspace05
+assign [class="Google-chrome" window_role="browser"] $workspace06
+assign [class="Firefox" window_role="browser"] $workspace07
 assign [class="Opera"] $workspace08
 assign [class="Vlc"] $workspace09
 assign [class="Rhytmbox"] $workspace10
