@@ -121,6 +121,7 @@ source ~/.zplug/init.zsh
 
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 zplug zsh-users/zsh-autosuggestions, from:github, as:plugin
+zplug zsh-users/zsh-completions, from:github, as:plugin
 zplug zsh-users/zsh-syntax-highlighting, from:github, as:plugin
 zplug load
 
