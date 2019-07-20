@@ -253,6 +253,11 @@ bindsym $mod+shift+x exec i3lock-fancy
 gaps inner 6
 smart_gaps on
 
+# Screenshots
+bindsym Print exec maim ~/Pictures/$(date +%s).png
+bindsym $mod+Print exec maim ~/Pictures/$(date +%s).png -s
+bindsym $mod+Shift+s exec maim ~/Pictures/$(date +%s).png
+
 # workspace 01 gaps inner 75
 
 # Monitor configuration (for desktop pc)
