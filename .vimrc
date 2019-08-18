@@ -89,36 +89,47 @@ Plug 'tomasr/molokai'
 "Plug 'dracula/vim'
 
 " Plugins tested
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'honza/vim-snippets'
-Plug 'leafgarland/typescript-vim'
-Plug 'vimwiki/vimwiki'
+Plug 'bling/vim-airline'                " lean & mean status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline-themes'   " A collection of themes for vim-airline
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }  " A tree explorer plugin for vim.
+Plug 'Xuyuanp/nerdtree-git-plugin'      " A plugin of NERDTree showing git status
+Plug 'tpope/vim-fugitive'               " fugitive.vim: A Git wrapper so awesome, it should be illegal 
+Plug 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
+Plug 'tpope/vim-commentary'             " commentary.vim: comment stuff out
+Plug 'tpope/vim-surround'               " surround.vim: quoting/parenthesizing made simple
+Plug 'honza/vim-snippets'               " vim-snipmate default snippets (Previously snipmate-snippets)
+Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
+Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 
 " Plugins under test
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'SirVer/ultisnips'
+Plug 'OmniSharp/omnisharp-vim'          " Vim omnicompletion (intellisense) and more for c#
+Plug 'ctrlpvim/ctrlp.vim'               " Active fork of kien/ctrlp.vim—Fuzzy file, buffer, mru, tag, etc finder
+Plug 'vim-syntastic/syntastic'          " Syntax checking hacks for vim
+if has('python')
+    Plug 'SirVer/ultisnips'                 " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
+endif
+
 
 " Plugins to test
-"Plug 'junegunn/fzf.vim'
-"Plug 'edkolev/tmuxline.vim'
-"Plug 'pangloss/vim-javascript'
-"Plug 'neomake/neomake'
-"Plug 'majutsushi/tagbar'
-"Plug 'godlygeek/tabular'
-"Plug 'ervandew/supertab'
+"Plug 'junegunn/fzf.vim'                 " A command-line fuzzy finder
+"Plug 'edkolev/tmuxline.vim'             " Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration
+"Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
+"Plug 'neomake/neomake'                  " Asynchronous linting and make framework for Neovim/Vim
+"Plug 'w0rp/ale'                         " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+"Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with "."
+"Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment
+"Plug 'plasticboy/vim-markdown'          " Markdown Vim Mode
+"Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
+"Plug 'easymotion/vim-easymotion'        " Vim motions on speed
+"Plug 'terryma/vim-multiple-cursors'     " True Sublime Text style multiple selections for Vim
+"Plug 'yggdroot/indentline'              " A vim plugin to display the indention levels with thin vertical lines
+"Plug 'tpope/vim-sensible'               " sensible.vim: Defaults everyone can agree on
+"Plug 'sheerun/vim-polyglot'             " A solid language pack for Vim.
+"Plug 'xuyuanp/nerdtree-git-plugin'      " A plugin of NERDTree showing git status
+"Plug 'majutsushi/tagbar'                " Vim plugin that displays tags in a window, ordered by scope
+"Plug 'scrooloose/nerdcommenter          " Vim plugin for intensely orgasmic commenting
 
 call plug#end()
-
-filetype plugin indent on
 
 "Airline setting theme
 let g:airline_theme='powerlineish'
