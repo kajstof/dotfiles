@@ -102,13 +102,12 @@ Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 
 " Plugins under test
-Plug 'OmniSharp/omnisharp-vim'          " Vim omnicompletion (intellisense) and more for c#
-Plug 'ctrlpvim/ctrlp.vim'               " Active fork of kien/ctrlp.vim—Fuzzy file, buffer, mru, tag, etc finder
+Plug 'ctrlpvim/ctrlp.vim'               " Active fork of kien/ctrlp.vim. Fuzzy file, buffer, mru, tag, etc finder
 Plug 'vim-syntastic/syntastic'          " Syntax checking hacks for vim
 if has('python')
+    Plug 'OmniSharp/omnisharp-vim'          " Vim omnicompletion (intellisense) and more for c#
     Plug 'SirVer/ultisnips'                 " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
 endif
-
 
 " Plugins to test
 "Plug 'junegunn/fzf.vim'                 " A command-line fuzzy finder
@@ -145,6 +144,7 @@ let NERDTreeShowBookmarks=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+"set statusline+=%{FugitiveStatusline()}
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
