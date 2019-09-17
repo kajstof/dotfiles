@@ -104,6 +104,7 @@ Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 " Plugins under test
 Plug 'ctrlpvim/ctrlp.vim'               " Active fork of kien/ctrlp.vim. Fuzzy file, buffer, mru, tag, etc finder
 Plug 'vim-syntastic/syntastic'          " Syntax checking hacks for vim
+Plug 'rust-lang/rust.vim'               " Vim configuration for Rust
 if has('python')
     Plug 'OmniSharp/omnisharp-vim'          " Vim omnicompletion (intellisense) and more for c#
     Plug 'SirVer/ultisnips'                 " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
