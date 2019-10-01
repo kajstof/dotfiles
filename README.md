@@ -23,32 +23,38 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/kajstof/dotfiles ~/dotfiles
 ```
 
-7. Add symbolic link to `dotfiles/.vimrc` (use cmd):
+7. Add symbolic link to `dotfiles/.vimrc` (use `cmd` with admin privileges):
 
 ```cmd
-rm %userprofile%\.vimrc
+del %userprofile%\.vimrc
 mklink %userprofile%\.vimrc %userprofile%\dotfiles\.vimrc
 ```
 
-8. Add symbolic link to cmder config files (use cmd):
+8. Add symbolic link to cmder config files (use `cmd` with admin privileges):
 
 ```cmd
-rm C:\tools\cmder\config\user-ConEmu.xml
-rm C:\tools\cmder\config\settings
-rm C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml
+del C:\tools\cmder\config\user-ConEmu.xml
+del C:\tools\cmder\config\settings
+del C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml
 
 mklink C:\tools\cmder\config\user-ConEmu.xml %userprofile%\dotfiles\cmder\config\user-ConEmu.xml
 mklink C:\tools\cmder\config\settings %userprofile%\dotfiles\cmder\config\settings
 mklink C:\tools\cmder\vendor\conemu-maximus5\ConEmu.xml %userprofile%\dotfiles\cmder\vendor\conemu-maximus5\ConEmu.xml
 ```
 
-9. Add symbolic lint to .bash_profile
+9. Add symbolic lint to .bash_profile (use `cmd` with admin privileges)
 ```cmd
-rm %userprofile%\.bash_profile
+del %userprofile%\.bash_profile
 mklink %userprofile%\.bash_profile %userprofile%\dotfiles\.bash_profile
 ```
 
-10. Change default keyboard repeat rate values in registry: `keyboard_fast.reg`, (default values - `keyboard_default.reg`)
+10. Add symbolic lint to .bash_profile (use `cmd` with admin privileges)
+```cmd
+del %userprofile%\.tigrc
+mklink %userprofile%\.tigrc %userprofile%\dotfiles\.tigrc
+```
+
+11. Change default keyboard repeat rate values in registry: `keyboard_fast.reg`, (default values - `keyboard_default.reg`)
 
 ## Linux Mint on VirtualBox
 
