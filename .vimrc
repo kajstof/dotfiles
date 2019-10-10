@@ -84,9 +84,9 @@ call plug#begin('~/.vim/plugged')
 
 " Color schemes
 Plug 'tomasr/molokai'
-"Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim'
+Plug 'joshdick/onedark.vim'
 "Plug 'morhetz/gruvbox'
-"Plug 'dracula/vim'
 
 " Plugins tested
 Plug 'bling/vim-airline'                " lean & mean status/tabline for vim that's light as air
@@ -132,8 +132,10 @@ endif
 call plug#end()
 
 "Airline setting theme
-let g:airline_theme='powerlineish'
+"let g:airline_theme='powerlineish'
+"let g:airline_theme='molokai'
 "let g:airline_theme='dracula'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 
 let g:airline#extensions#tabline#enabled=1
@@ -162,7 +164,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Set colorscheme
 set background=dark
-colorscheme molokai
+" colorscheme molokai
+" colorscheme dracula
+colorscheme onedark
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
