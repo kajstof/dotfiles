@@ -3,6 +3,8 @@ export EDITOR="$VISUAL"
 
 export XDG_CONFIG_HOME="/home/$USER/.config"
 
+export PATH="/home/$USER/Tools/Rider/bin:$PATH"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -13,6 +15,7 @@ export ZSH="/home/$USER/.oh-my-zsh"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -79,7 +82,7 @@ plugins=(
   sudo
   # taskwarrior
   z
-  zsh-autosuggestions
+  # zsh-autosuggestions
   # zsh-completions
 )
 
@@ -119,10 +122,10 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zplug/init.zsh
 
-zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
-zplug zsh-users/zsh-autosuggestions, from:github, as:plugin
-zplug zsh-users/zsh-completions, from:github, as:plugin
-zplug zsh-users/zsh-syntax-highlighting, from:github, as:plugin
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug "zsh-users/zsh-autosuggestions", from:github, as:plugin
+zplug "zsh-users/zsh-completions", from:github, as:plugin
+zplug "zsh-users/zsh-syntax-highlighting", from:github, as:plugin
 zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -130,7 +133,7 @@ zplug load
 if [ -f "/home/$USER/.local/bin/aws_zsh_completer.sh" ]; then source "/home/$USER/.local/bin/aws_zsh_completer.sh"; fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f "/home/$USER/Tools/google-cloud-sdk/path.zsh.inc" ]; then source "/home/$USER/Tools/google-cloud-sdk/path.zsh.inc"; fi
+if [ -f "/home/$USER/google-cloud-sdk/path.zsh.inc" ]; then . "/home/$USER/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f "/home/$USER/Tools/google-cloud-sdk/completion.zsh.inc" ]; then source "/home/$USER/Tools/google-cloud-sdk/completion.zsh.inc"; fi
+if [ -f "/home/$USER/google-cloud-sdk/completion.zsh.inc" ]; then . "/home/$USER/google-cloud-sdk/completion.zsh.inc"; fi
