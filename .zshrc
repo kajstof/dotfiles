@@ -74,9 +74,9 @@ plugins=(
   colored-man-pages
   git
   # kubectl
-  # ng
+  ng
   # npm
-  # pip
+  pip
   # python
   # rsync
   sudo
