@@ -90,6 +90,14 @@ autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
+# zsh parameter completion for the dotnet CLI
+_dotnet_zsh_complete() 
+{
+  local completions=("$(dotnet complete "$words")")
+  reply=( "${(ps:\n:)completions}" )
+}
+compctl -K _dotnet_zsh_complete dotnet
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
