@@ -171,6 +171,8 @@ colorscheme onedark
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
 map Y y$
-map <C-r> :source $MYVIMRC<CR>
-map <C-n> :NERDTreeToggle<CR>
-map <C-s> :GitGutterLineHighlightsToggle<CR>
+map <F2> :source $MYVIMRC<CR>
+map <F3> :NERDTreeToggle<CR>
+map <F4> :GitGutterLineHighlightsToggle<CR>
+
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
