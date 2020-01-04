@@ -5,16 +5,16 @@
 1. Install choco and then run (in powershell):
 
 ```cmd
-choco install 7zip autohotkey cmder cpu-z git golang keepassxc mingw nodejs python -y
+choco install 7zip autohotkey bat cmder cpu-z fzf git golang less monitorswitcher mpv msiafterburner nodejs python ripgrep vim -y
 ```
 
 2. Install gvim
-3. Install Python3.6-32 and add it to PATH
+3. Install Python3 related to used in Vim (:version)
 4. Install DejaVuSansMono and Ubuntu Mono derivative font for powerline: [GitHub - powerline/fonts: Patched fonts for Powerline users.](https://github.com/powerline/fonts)
 5. Clone Vundle for vim:
 
 ```sh
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 6. Clone dotfiles to $HOME directory
