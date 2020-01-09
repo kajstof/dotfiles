@@ -174,5 +174,6 @@ map Y y$
 map <F2> :source $MYVIMRC<CR>
 map <F3> :NERDTreeToggle<CR>
 map <F4> :GitGutterLineHighlightsToggle<CR>
+noremap <Leader>\t :botright vertical terminal<CR>
 
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
