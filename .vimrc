@@ -77,6 +77,10 @@ if has("gui_running")
     endif
 endif
 
+if has('win32')
+    set shell=c:\Program\ Files\\Git\\bin\\bash.exe
+endif
+
 set noswapfile
 
 set rtp+=~/.vim
