@@ -15,6 +15,7 @@ choco install 7zip autohotkey bat cmder cpu-z fzf git golang less monitorswitche
 
 ```sh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/AppData/Local/nvim/autoload/plug --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 6. Clone dotfiles to $HOME directory
