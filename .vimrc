@@ -56,7 +56,7 @@ set encoding=utf8
 
 " Add number to lines
 set number          " or nu
-set relativenumber  " or rnu
+" set relativenumber  " or rnu
 
 
 if has("gui_running")
