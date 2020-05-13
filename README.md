@@ -23,11 +23,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 git clone https://github.com/kajstof/dotfiles ~/dotfiles
 ```
 
-7. Add symbolic link to `dotfiles/.vimrc` (use `cmd` with admin privileges):
+7. Add symbolic link to `dotfiles/.vimrc` and `dotfiles/init.vim` (use `cmd` with admin privileges):
 
 ```cmd
 del %userprofile%\.vimrc
 mklink %userprofile%\.vimrc %userprofile%\dotfiles\.vimrc
+del %userprofile%\AppData\Local\nvim\init.vim
+mklink %userprofile%\AppData\Local\nvim\init.vim %userprofile%\dotfiles\init.vim
 ```
 
 8. Add symbolic link to cmder config files (use `cmd` with admin privileges):
