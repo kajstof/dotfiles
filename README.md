@@ -258,6 +258,7 @@ rm -rf ~/.profile ~/.zshrc ~/.vimrc ~/.Xresources ~/.config/fontconfig ~/.config
 ln -s ~/dotfiles/.profile ~/.profile
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.config/fontconfig ~/.config/fontconfig
 ln -s ~/dotfiles/.config/i3 ~/.config/i3
