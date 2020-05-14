@@ -31,6 +31,8 @@ del %userprofile%\.vimrc
 mklink %userprofile%\.vimrc %userprofile%\dotfiles\.vimrc
 del %userprofile%\AppData\Local\nvim\init.vim
 mklink %userprofile%\AppData\Local\nvim\init.vim %userprofile%\dotfiles\init.vim
+del %userprofile%\.ideavimrc
+mklink %userprofile%\.ideavimrc %userprofile%\dotfiles\.ideavimrc
 ```
 
 8. Add symbolic link to cmder config files (use `cmd` with admin privileges):
