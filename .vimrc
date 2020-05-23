@@ -56,7 +56,7 @@ set encoding=utf8
 
 " Add number to lines
 set number          " or nu
-" set relativenumber  " or rnu
+set relativenumber  " or rnu
 
 
 if has("gui_running")
@@ -174,6 +174,7 @@ set background=dark
 " colorscheme molokai
 " colorscheme dracula
 colorscheme onedark
+" colorscheme gruvbox
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default

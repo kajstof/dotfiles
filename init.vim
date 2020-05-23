@@ -21,7 +21,7 @@ set tabstop=4
 
 " Add number to lines
 set number          " or nu
-" set relativenumber  " or rnu
+set relativenumber  " or rnu
 
 " if has('win32')
 "     set shell=c:\Program\ Files\Git\bin\bash.exe
@@ -93,7 +93,10 @@ let g:airline#extensions#tabline#enabled=1
 let NERDTreeShowHidden=1
 let NERDTreeShowBookmarks=1
 
+" colorscheme molokai
+" colorscheme dracula
 colorscheme onedark
+" colorscheme gruvbox
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
