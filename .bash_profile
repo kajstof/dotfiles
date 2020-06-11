@@ -112,13 +112,3 @@ alias gwch='git whatchanged -p --abbrev-commit --pretty = medium'
 alias gwip='git add -A; git ls-files --deleted -z | xargs -r0 git rm; git commit -m "--wip--"'
 
 alias gchk='git checkout $(git branch --all | fzf)'
-
-vim()
-{
-    /c/tools/vim/vim82/vim.exe "$@" &
-}
-
-gvim()
-{
-    /c/tools/vim/vim82/gvim.exe "$@" &
-}
