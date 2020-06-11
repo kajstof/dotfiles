@@ -10,11 +10,13 @@ choco install 7zip autohotkey bat caliber cmder cpu-z deno dexpot fzf git golang
 
 2. Install gvim
 3. Install Python3 related to used in Vim (:version)
-4. Install DejaVuSansMono and Ubuntu Mono derivative font for powerline: [GitHub - powerline/fonts: Patched fonts for Powerline users.](https://github.com/powerline/fonts)
-5. Clone Vundle for vim:
+4. ~Install DejaVuSansMono and Ubuntu Mono derivative font for powerline: [GitHub - powerline/fonts: Patched fonts for Powerline users.](https://github.com/powerline/fonts)~
+5. Clone Vundle for vim and/or neovim:
 
 ```sh
+# Vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Neovim
 curl -fLo ~/AppData/Local/nvim/autoload/plug --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
