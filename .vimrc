@@ -8,7 +8,7 @@ set clipboard=unnamed,unnamedplus
 set nocompatible
 
 " Enable syntax highlighting
-"syntax on
+" syntax on
 
 " Better command-line completion
 set wildmenu
@@ -30,7 +30,7 @@ set autoindent
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
-"set nostartofline
+" set nostartofline
 
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
@@ -38,7 +38,7 @@ set confirm
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
-"set cmdheight=2
+" set cmdheight=2
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -71,7 +71,7 @@ if has("gui_running")
         set columns=143
 
         set guifont=Ubuntu_Mono_derivative_Powerlin:h11
-        "set guifont=DejaVu_Sans_Mono_for_Powerline:h9
+        " set guifont=DejaVu_Sans_Mono_for_Powerline:h9
     else
         set guifont=Ubuntu\ Mono\ 11
     endif
@@ -90,7 +90,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'tomasr/molokai'
 " Plug 'dracula/vim'
 Plug 'joshdick/onedark.vim'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " Plugins tested
 Plug 'bling/vim-airline'                " lean & mean status/tabline for vim that's light as air
@@ -118,32 +118,32 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " endif
 
 " Plugins to test
-"Plug 'junegunn/fzf.vim'                 " A command-line fuzzy finder
-"Plug 'edkolev/tmuxline.vim'             " Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration
-"Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
-"Plug 'neomake/neomake'                  " Asynchronous linting and make framework for Neovim/Vim
-"Plug 'w0rp/ale'                         " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
-"Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with '.'
-"Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment
-"Plug 'plasticboy/vim-markdown'          " Markdown Vim Mode
-"Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
-"Plug 'easymotion/vim-easymotion'        " Vim motions on speed
-"Plug 'terryma/vim-multiple-cursors'     " True Sublime Text style multiple selections for Vim
-"Plug 'yggdroot/indentline'              " A vim plugin to display the indention levels with thin vertical lines
-"Plug 'tpope/vim-sensible'               " sensible.vim: Defaults everyone can agree on
-"Plug 'majutsushi/tagbar'                " Vim plugin that displays tags in a window, ordered by scope
-"Plug 'scrooloose/nerdcommenter          " Vim plugin for intensely orgasmic commenting
-"Plug 'brooth/far.vim'                   " Find And Replace Vim plugin
-" Color schemes
+" Plug 'junegunn/fzf.vim'                 " A command-line fuzzy finder
+" Plug 'edkolev/tmuxline.vim'             " Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration
+" Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
+" Plug 'neomake/neomake'                  " Asynchronous linting and make framework for Neovim/Vim
+" Plug 'w0rp/ale'                         " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+" Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with '.'
+" Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment
+" Plug 'plasticboy/vim-markdown'          " Markdown Vim Mode
+" Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
+" Plug 'easymotion/vim-easymotion'        " Vim motions on speed
+" Plug 'terryma/vim-multiple-cursors'     " True Sublime Text style multiple selections for Vim
+" Plug 'yggdroot/indentline'              " A vim plugin to display the indention levels with thin vertical lines
+" Plug 'tpope/vim-sensible'               " sensible.vim: Defaults everyone can agree on
+" Plug 'majutsushi/tagbar'                " Vim plugin that displays tags in a window, ordered by scope
+" Plug 'scrooloose/nerdcommenter          " Vim plugin for intensely orgasmic commenting
+" Plug 'brooth/far.vim'                   " Find And Replace Vim plugin
 
 call plug#end()
 
-"Airline setting theme
-"let g:airline_theme='powerlineish'
-"let g:airline_theme='molokai'
-"let g:airline_theme='dracula'
+" Airline setting theme
+" let g:airline_theme='powerlineish'
+" let g:airline_theme='molokai'
+" let g:airline_theme='dracula'
 let g:airline_theme='onedark'
-"let g:airline_powerline_fonts=1
+" let g:airline_theme='gruvbox'
+" let g:airline_powerline_fonts=1
 
 let g:airline#extensions#tabline#enabled=1
 
@@ -151,23 +151,23 @@ let g:airline#extensions#tabline#enabled=1
 let NERDTreeShowHidden=1
 let NERDTreeShowBookmarks=1
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-"set statusline+=%{FugitiveStatusline()}
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" set statusline+=%{FugitiveStatusline()}
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsEditSplit="vertical"
 
 " Set colorscheme
 set background=dark

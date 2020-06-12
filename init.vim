@@ -61,33 +61,33 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " endif
 
 " Plugins to test
-"Plug 'junegunn/fzf.vim'                 " A command-line fuzzy finder
-"Plug 'edkolev/tmuxline.vim'             " Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration
-"Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
-"Plug 'neomake/neomake'                  " Asynchronous linting and make framework for Neovim/Vim
-"Plug 'w0rp/ale'                         " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
-"Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with '.'
-"Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment
-"Plug 'plasticboy/vim-markdown'          " Markdown Vim Mode
-"Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
-"Plug 'easymotion/vim-easymotion'        " Vim motions on speed
-"Plug 'terryma/vim-multiple-cursors'     " True Sublime Text style multiple selections for Vim
-"Plug 'yggdroot/indentline'              " A vim plugin to display the indention levels with thin vertical lines
-"Plug 'tpope/vim-sensible'               " sensible.vim: Defaults everyone can agree on
-"Plug 'majutsushi/tagbar'                " Vim plugin that displays tags in a window, ordered by scope
-"Plug 'scrooloose/nerdcommenter          " Vim plugin for intensely orgasmic commenting
-"Plug 'brooth/far.vim'                   " Find And Replace Vim plugin
+" Plug 'junegunn/fzf.vim'                 " A command-line fuzzy finder
+" Plug 'edkolev/tmuxline.vim'             " Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration
+" Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
+" Plug 'neomake/neomake'                  " Asynchronous linting and make framework for Neovim/Vim
+" Plug 'w0rp/ale'                         " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+" Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with '.'
+" Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment
+" Plug 'plasticboy/vim-markdown'          " Markdown Vim Mode
+" Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
+" Plug 'easymotion/vim-easymotion'        " Vim motions on speed
+" Plug 'terryma/vim-multiple-cursors'     " True Sublime Text style multiple selections for Vim
+" Plug 'yggdroot/indentline'              " A vim plugin to display the indention levels with thin vertical lines
+" Plug 'tpope/vim-sensible'               " sensible.vim: Defaults everyone can agree on
+" Plug 'majutsushi/tagbar'                " Vim plugin that displays tags in a window, ordered by scope
+" Plug 'scrooloose/nerdcommenter          " Vim plugin for intensely orgasmic commenting
+" Plug 'brooth/far.vim'                   " Find And Replace Vim plugin
 
 call plug#end()
 
-"Airline setting theme
-"let g:airline_theme='powerlineish'
-"let g:airline_theme='molokai'
-"let g:airline_theme='dracula'
+" Airline setting theme
+" let g:airline_theme='powerlineish'
+" let g:airline_theme='molokai'
+" let g:airline_theme='dracula'
 let g:airline_theme='onedark'
 " let g:airline_theme='gruvbox'
 
-"let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 
 let g:airline#extensions#tabline#enabled=1
 
