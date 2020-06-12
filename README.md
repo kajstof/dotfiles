@@ -5,7 +5,7 @@
 1. Install choco and then run (in powershell):
 
 ```cmd
-choco install 7zip autohotkey bat calibre cmder cpu-z deno dexpot fzf git golang less monitorswitcher mpv msiafterburner neovim nodejs powertoys python ripgrep vifm vim -y --params "/NoDesktopShortcuts"
+choco install 7zip autohotkey bat calibre cmder cpu-z deno dexpot ditto fzf git golang less monitorswitcher mpv msiafterburner neovim nodejs powertoys python ripgrep vifm vim -y --params "/NoDesktopShortcuts"
 ```
 
 2. Install gvim
