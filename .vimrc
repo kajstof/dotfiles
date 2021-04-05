@@ -12,7 +12,7 @@ set nocompatible
 
 " Better command-line completion
 set wildmenu
- 
+
 " Show partial commands in the last line of the screen
 set showcmd
 
@@ -26,7 +26,7 @@ set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
- 
+
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
@@ -58,7 +58,6 @@ set encoding=utf8
 set number          " or nu
 set relativenumber  " or rnu
 
-
 if has("gui_running")
     "set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar
@@ -70,8 +69,8 @@ if has("gui_running")
         set lines=50
         set columns=143
 
-        set guifont=Ubuntu_Mono_derivative_Powerlin:h11
-        " set guifont=DejaVu_Sans_Mono_for_Powerline:h9
+        set guifont=UbuntuMono_NF:h11
+        "set guifont=DejaVu_Sans_Mono_for_Powerline:h9
     else
         set guifont=Ubuntu\ Mono\ 11
     endif
@@ -82,6 +81,9 @@ endif
 " endif
 
 set noswapfile
+
+" Sensible options
+set incsearch
 
 set rtp+=~/.vim
 call plug#begin('~/.vim/plugged')
@@ -97,7 +99,7 @@ Plug 'bling/vim-airline'                " lean & mean status/tabline for vim tha
 Plug 'vim-airline/vim-airline-themes'   " A collection of themes for vim-airline
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }  " A tree explorer plugin for vim.
 Plug 'xuyuanp/nerdtree-git-plugin'      " A plugin of NERDTree showing git status
-Plug 'tpope/vim-fugitive'               " fugitive.vim: A Git wrapper so awesome, it should be illegal 
+Plug 'tpope/vim-fugitive'               " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plug 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
 Plug 'tpope/vim-commentary'             " commentary.vim: comment stuff out
 Plug 'tpope/vim-surround'               " surround.vim: quoting/parenthesizing made simple
@@ -187,3 +189,69 @@ map <Leader>g :GitGutterLineHighlightsToggle<CR>
 noremap <Leader>t :botright vertical terminal<CR>
 
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+
+" Vertically center document when entering insert mode
+autocmd InsertEnter * norm zz
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+" ------ Standard Bindings ------
+nnoremap <C-t> :!touch<Space>
+nnoremap <C-d> :!mkdir<Space>
+nnoremap <C-m> :!mv<Space>%<Space>
+
+nnoremap gl $
+nnoremap gh 0
+" nnoremap gk H
+" nnoremap gj L
+" nnoremap gt gg
+" nnoremap gb G
+
+" Enable spell checking, s for spell check
+map <leader>s :setlocal spell! spelllang=pl_pl<CR>
+
+" Enable/Disable Auto Indend
+map <leader>i :setlocal autoindent<CR>
+map <leader>I :setlocal noautoindent<CR>
+
+" Compile and open output
+" map <leader>G :w! \| !comp <c-r>%<CR><CR>
+" map <leader>o :!opout <c-r>%<CR><CR>
+
+" Shortcutting split navigation
+" map <C-h> <C-w>h
+" map <C-j> <C-w>j
+" map <C-k> <C-w>k
+" map <C-l> <C-w>l
+
+" Shortcut split opening
+nnoremap <leader>h :split<Space>
+nnoremap <leader>v :vsplit<Space>
+
+" Alias replace all to S
+nnoremap S :%s//gI<Left><Left><Left>
+
+" Save file as sudo when no sudo permissions
+cnoremap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
+
+" Basic settings
+" set mouse=a
+" syntax on
+" set ignorecase
+" set smartcase
+" set encoding=utf-8
+" set number relativenumber
+" set termguicolors
+
+" Tab Settings
+" set expandtab
+" set shiftwidth=2
+" set softtabstop=2
+" set tabstop=2
+
+set cursorline
+set cursorcolumn
+highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
+highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#2b2b2b
+
