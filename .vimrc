@@ -70,7 +70,7 @@ if has("gui_running")
         set columns=143
 
         set guifont=UbuntuMono_NF:h11
-        "set guifont=DejaVu_Sans_Mono_for_Powerline:h9
+        " set guifont=DejaVu_Sans_Mono_for_Powerline:h9
     else
         set guifont=Ubuntu\ Mono\ 11
     endif
@@ -254,4 +254,3 @@ set cursorline
 set cursorcolumn
 highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
 highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#2b2b2b
-
