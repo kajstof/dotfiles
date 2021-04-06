@@ -5,13 +5,14 @@
 1. Install choco and then run (in powershell):
 
 ```cmd
-choco install 7zip autohotkey bat calibre cmder cpu-z deno dexpot ditto fzf git golang less monitorswitcher mpv msiafterburner neovim nodejs powertoys python ripgrep vifm vim -y --params "/NoDesktopShortcuts"
+choco install 7zip autohotkey bat caliber cmder cpu-z deno dexpot ditto fzf git golang handbrake less lockhunter microsoft-windows-terminal monitorswitcher mpv msiafterburner neovim ngrok nodejs nuget.commandline obs-studio paint.net powertoys python python2 qtranslate ripgrep signal vifm vim zoom -y --params "/NoDesktopShortcuts"
 ```
 
 2. Install gvim
 3. Install Python3 related to used in Vim (:version)
 4. ~Install DejaVuSansMono and Ubuntu Mono derivative font for powerline: [GitHub - powerline/fonts: Patched fonts for Powerline users.](https://github.com/powerline/fonts)~
-5. Clone vim-plug for vim and/or neovim:
+5. Install UbuntuMono NF (Nerd Font): [GitHub - ryanoasis/ner-fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts) via [DownGit](https://downgit.github.io)
+6. Clone vim-plug for vim and/or neovim:
 
 ```sh
 # Vim
