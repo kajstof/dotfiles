@@ -69,10 +69,10 @@ if has("gui_running")
         set lines=50
         set columns=143
 
-        set guifont=UbuntuMono_NF:h11
+        set guifont=UbuntuMono_Nerd_Font:h12
         " set guifont=DejaVu_Sans_Mono_for_Powerline:h9
     else
-        set guifont=Ubuntu\ Mono\ 11
+        set guifont=UbuntuMono\ Nerd\ Font\ 12
     endif
 endif
 
@@ -252,5 +252,5 @@ cnoremap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
 
 set cursorline
 set cursorcolumn
-highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
-highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#2b2b2b
+highlight CursorLine ctermbg=Yellow cterm=bold guibg=#222233
+highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#222233
