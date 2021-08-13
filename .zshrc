@@ -72,12 +72,14 @@ ZSH_THEME="robbyrussell"
 plugins=(
   # aws
   colored-man-pages
+  docker
+  docker-compose
   git
   # kubectl
   ng
-  # npm
+  npm
   pip
-  # python
+  python
   # rsync
   sudo
   # taskwarrior
