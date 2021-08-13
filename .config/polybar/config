@@ -27,7 +27,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/example]
+[bar/primary]
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 22
@@ -39,7 +39,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 line-color = #f00
 
 border-size = 0
@@ -52,16 +52,18 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Ubuntu:pixelsize=10;2
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
-font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
-font-5 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
+font-0 = Ubuntu:pixelsize=10:weight=100;2
+; font-0 = Ubuntu Mono:pixelsize=11;2
+; font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+; font-2 = siji:pixelsize=10;1
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = mpd filesystem xbacklight xkeyboard memory cpu battery temperature wlan eth alsa date powermenu
+; modules-right = mpd filesystem xbacklight xkeyboard cpu memory battery temperature_pch temperature eth wlan bluetooth pulseaudio date powermenu
+modules-right = mpd filesystem xbacklight xkeyboard cpu memory battery temperature_pch temperature eth wlan bluetooth vpn-wireguard pulseaudio date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -76,8 +78,46 @@ tray-padding = 2
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+; scroll-up = i3wm-wsnext
+; scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/secondary]
+monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 22
+radius = 3.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-bottom-size = 1
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Ubuntu:pixelsize=10:weight=100;2
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = date
+
+tray-position = right
+tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -91,9 +131,9 @@ label = %title:0:120:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+; format-prefix = " "
+; format-prefix-foreground = ${colors.foreground-alt}
+; format-prefix-underline = ${colors.secondary}
 
 label-layout =  %layout%
 label-layout-underline = ${colors.secondary}
@@ -108,7 +148,6 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -228,12 +267,13 @@ label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlxe8de271a2f12
+interface = wlo1
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+; format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
 format-connected-underline = #9f78e1
-label-connected =  %essid%
+label-connected =  %essid% [%local_ip%]
 
 ;format-disconnected =
 format-disconnected = <label-disconnected>
@@ -251,7 +291,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp4s0
+interface = eno2
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -259,11 +299,28 @@ format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected =  %local_ip%
 
-format-disconnected =
+format-disconnected = 
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/bluetooth]
+type = custom/script
+exec = ~/dotfiles/scripts/bluetooth.sh
+interval = 2
+click-left = blueman-manager
+click-right = ~/dotfiles/scripts/bluetooth_toggle.sh
+format-padding = 1
+format-foreground = #ffffff
+format-underline = #0a6cf5
+
+[module/vpn-wireguard]
+type = custom/script
+exec = ~/dotfiles/scripts/vpn-wireguard.sh
+interval = 5
+click-left = ~/dotfiles/scripts/vpn-wireguard.sh --toggle &
+format-underline = #ff9900
 
 [module/date]
 type = internal/date
@@ -284,12 +341,21 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+use-ui-max = false
+
+format-volume = <ramp-volume> <bar-volume> <label-volume>
+
+ramp-volume-0 = 
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+; label-muted = 
+label-muted = -------- 0%
 label-muted-foreground = #666
+format-muted-foreground = ${colors.foreground-alt}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -299,14 +365,20 @@ bar-volume-foreground-3 = #55aa55
 bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
+bar-volume-gradient = true
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
+; bar-volume-fill = ─
+bar-volume-fill = -
 bar-volume-fill-font = 2
-bar-volume-empty = ─
+; bar-volume-empty = ─
+bar-volume-empty = -
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+; Right and Middle click
+click-right = exec pavucontrol
+; click-middle = pavucontrol
 
 [module/alsa]
 type = internal/alsa
@@ -344,14 +416,25 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+; format-charging-underline = #ffb52a
 
 format-discharging =  <animation-discharging> <label-discharging>
+; format-discharging-underline = ${self.format-charging-underline}
+
+format-full =  <label-full>
+label-full = %percentage%%
+
+; format-charging =  <label-charging>
+label-charging = %percentage%% %time%
+format-charging-underline = #ffb52a
+
+; format-discharging = <label-discharging>
+label-discharging = %percentage%% %time%
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+; format-full-prefix = " "
+; format-full-prefix-foreground = ${colors.foreground-alt}
+; format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -372,15 +455,34 @@ animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
+thermal-zone = 8
+warn-temperature = 80
 
-format = <ramp> <label>
+format = <label>
 format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label =  %temperature-c%
+label-warn =  %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/temperature_pch]
+type = internal/temperature
+thermal-zone = 6
+warn-temperature = 75
+
+format = <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label =  PCH %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
@@ -399,31 +501,39 @@ format-spacing = 1
 ;label-open = 
 label-open = 
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
+menu-0-0 = logout
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = reboot
 menu-0-1-exec = menu-open-2
+menu-0-2 = power off
+menu-0-2-exec = menu-open-3
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = reboot
+; menu-1-0 = cancel
+; menu-1-0-exec = menu-open-0
+menu-1-0 = logout
+menu-1-0-exec = i3-msg exit
+; menu-1-0-exec = ~/.config/polybar/logout.sh
 
-menu-2-0 = cancel
-menu-2-0-exec = menu-open-0
-menu-2-1 = power off
-menu-2-1-exec = poweroff
+; menu-2-0 = cancel
+; menu-2-0-exec = menu-open-0
+menu-2-0 = reboot
+menu-2-0-exec = reboot
+
+; menu-3-0 = cancel
+; menu-3-0-exec = menu-open-0
+menu-3-0 = power off
+menu-3-0-exec = poweroff
 
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
 ;compositing-background = screen
-;compositing-foreground = source
+compositing-foreground = source
 ;compositing-border = over
 
 [global/wm]
