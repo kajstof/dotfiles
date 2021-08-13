@@ -6,8 +6,7 @@ set ignorecase
 set smartcase
 
 " Instead of failing a command because of unsaved changes, instead raise a
-" dialogue asking if you wish to save changed files.
-set confirm
+" dialogue asking if you wish to save changed files.  set confirm
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -86,8 +85,9 @@ call plug#end()
 " let g:airline_theme='dracula'
 let g:airline_theme='onedark'
 " let g:airline_theme='gruvbox'
+" let g:airline_theme='one'
 
-" let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=1
 
 let g:airline#extensions#tabline#enabled=1
 
@@ -99,6 +99,9 @@ let NERDTreeShowBookmarks=1
 " colorscheme dracula
 colorscheme onedark
 " colorscheme gruvbox
+
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
