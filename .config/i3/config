@@ -240,6 +240,7 @@ assign [class="discord"] $workspace07
 assign [class="mpv"] $workspace08
 assign [class="Vlc"] $workspace08
 # assign [class="Rhytmbox"] $workspace08
+assign [class="Clementine"] $workspace08
 assign [class="obs"] $workspace09
 
 # configuration edit
