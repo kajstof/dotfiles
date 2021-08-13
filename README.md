@@ -147,6 +147,8 @@ rm google-chrome-stable_current_amd64.deb
 cd ~
 
 # Termite
+# https://computingforgeeks.com/install-termite-terminal-on-ubuntu-18-04-ubuntu-16-04-lts/
+# https://github.com/GNOME/vte/commit/53690d5cee51bdb7c3f7680d3c22b316b1086f2c#diff-09af37e3a14d365cf086df3ead32aa7f
 cd ~/Tools
 sudo apt install -y libtool
 curl https://raw.githubusercontent.com/Corwind/termite-install/master/termite-install.sh > termite_install.sh
@@ -257,17 +259,19 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 # My config files configuration
 git clone https://github.com/kajstof/dotfiles ~/dotfiles
-rm -rf ~/.profile ~/.zshrc ~/.vimrc ~/.Xresources ~/.config/fontconfig ~/.config/i3 ~/.config/rofi ~/.config/polybar ~/.config/termite
+rm -rf ~/.profile ~/.zshrc ~/.vimrc ~/.Xresources ~/.config/alacritty ~/.config/fontconfig ~/.config/i3 ~/.config/rofi ~/.config/polybar ~/.config/dunst ~/.config/termite
 ln -s ~/dotfiles/.profile ~/.profile
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/dotfiles/.Xresources ~/.Xresources
+ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/fontconfig ~/.config/fontconfig
 ln -s ~/dotfiles/.config/i3 ~/.config/i3
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
-ln -s ~/dotfiles/.config/termite ~/.config/termite
+ln -s ~/dotfiles/.config/dunst ~/.config/dunst
+# ln -s ~/dotfiles/.config/termite ~/.config/termite
 
 # Vim plugins installation
 vim +PlugInstall +qall
