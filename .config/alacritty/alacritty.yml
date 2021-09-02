@@ -5,7 +5,7 @@ font:
   size: 11
 
 # Background opacity
-background_opacity: 0.9
+window.opacity: 0.9
 
 # Colors (One Dark)
 colors:
