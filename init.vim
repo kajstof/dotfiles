@@ -22,6 +22,8 @@ set tabstop=4
 set number          " or nu
 set relativenumber  " or rnu
 
+set guifont=UbuntuMono\ NF:h12
+
 " if has('win32')
 "     set shell=c:\Program\ Files\Git\bin\bash.exe
 " endif
