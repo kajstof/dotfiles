@@ -389,7 +389,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # lock screen
 bindsym $mod+Shift+x exec i3lock-fancy
 
-# bluetooth restart + connect momentum 3
+# bluetooth restart + connect Philips L3
 bindsym $mod+Shift+b exec "sudo service bluetooth restart && sleep 1 && bluetoothctl connect 7C:96:D2:73:16:69"
 
 # i3gaps
