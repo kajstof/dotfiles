@@ -1,6 +1,7 @@
 set number
-set relativenumber
+" set relativenumber
 set commentary
 set surround
-map Y y$
 set ideajoin
+
+map Y y$

@@ -108,6 +108,7 @@ Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 Plug 'sheerun/vim-polyglot'             " A solid language pack for Vim.
 Plug 'brooth/far.vim'                   " Find And Replace Vim plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 
 " Plugins under test
 " Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim

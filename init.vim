@@ -50,6 +50,7 @@ Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 Plug 'sheerun/vim-polyglot'             " A solid language pack for Vim.
 Plug 'brooth/far.vim'                   " Find And Replace Vim plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 
 " Plugins under test
 " Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
@@ -103,7 +104,7 @@ colorscheme onedark
 " colorscheme gruvbox
 
 highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+" highlight NonText ctermbg=none
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
@@ -114,5 +115,15 @@ map <Leader>r :source $MYVIMRC<CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>g :GitGutterLineHighlightsToggle<CR>
 noremap <Leader>t :botright vertical terminal<CR>
+
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
+omap ih <Plug>(GitGutterTextObjectInnerPending)
+omap ah <Plug>(GitGutterTextObjectOuterPending)
+xmap ih <Plug>(GitGutterTextObjectInnerVisual)
+xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
