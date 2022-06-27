@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 connection_status() {
-    connection=$(sudo wg show "$config" 2>/dev/null | head -n 1 | awk '{print $NF }')
+    connection=$(/opt/forticlient/fortivpn status | head -2 | tail -1 | sed 's/.*: //g')
 
     if [ "$connection" = "$config" ]; then
         echo "1"
@@ -10,14 +10,14 @@ connection_status() {
     fi
 }
 
-config="kkrysiak"
+config="Hemolens SSL"
 
 case "$1" in
 --toggle)
     if [ "$(connection_status)" = "1" ]; then
-        sudo wg-quick down "$config" 2>/dev/null
+        /opt/forticlient/fortivpn disconnect 2>/dev/null
     else
-        sudo wg-quick up "$config" 2>/dev/null
+        ~/LifeFlow/scripts/fortiexpect.sh 2>/dev/null
     fi
     ;;
 *)

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Create ~/Tools dir
 mkdir -p ~/Tools
 

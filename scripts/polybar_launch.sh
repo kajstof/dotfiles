@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # Default profile
 profile="primary"
 
