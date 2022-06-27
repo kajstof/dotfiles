@@ -26,7 +26,8 @@
   spacing: 0;
   background-color: transparent;
 
-  font: "Ubuntu 10";
+  font: "Ubuntu Mono Nerd Font 12";
+  /* font: "JetBrainsMono Nerd Font 10"; */
   text-color: @text;
 }
 
@@ -69,7 +70,7 @@ element {
   padding: 5px;
   text-color: @text-alt;
   highlight: bold #95ee8f; /* green */
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 element selected {
