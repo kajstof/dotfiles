@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 connection_status() {
-    connection=$(/opt/forticlient/fortivpn status | head -2 | tail -1 | sed 's/.*: //g')
+    connection=$(openvpn3 sessions-list 2>/dev/null | sed -n '5 p' | sed 's#.*/##' | sed 's/\s.*$//')
 
     if [ "$connection" = "$config" ]; then
         echo "1"
@@ -10,14 +10,14 @@ connection_status() {
     fi
 }
 
-config="Hemolens SSL"
+config="profile-21.ovpn"
 
 case "$1" in
 --toggle)
     if [ "$(connection_status)" = "1" ]; then
-        /opt/forticlient/fortivpn disconnect 2>/dev/null
+        openvpn3 session-manage --config "$HOME/Hemolens/scripts/$config" --disconnect
     else
-        ~/Hemolens/scripts/fortiexpect.sh 2>/dev/null
+        openvpn3 session-start --config "$HOME/Hemolens/scripts/$config"
     fi
     ;;
 *)

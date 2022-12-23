@@ -63,7 +63,8 @@ font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 modules-left = i3
 modules-center = xwindow
 ; modules-right = mpd filesystem xbacklight xkeyboard cpu memory battery temperature_pch temperature eth wlan bluetooth pulseaudio date powermenu
-modules-right = mpd filesystem xbacklight xkeyboard cpu memory battery temperature_pch temperature eth wlan bluetooth vpn-fortivpn pulseaudio date powermenu
+; modules-right = mpd filesystem xbacklight cpu memory battery temperature_pch temperature eth wlan bluetooth vpn-fortivpn pulseaudio date powermenu
+modules-right = mpd filesystem xbacklight cpu memory battery temperature_pch temperature eth wlan bluetooth vpn-openvpn3 pulseaudio date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -146,11 +147,12 @@ label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
-interval = 25
+interval = 30
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used%/%total%
+; label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used%/%total%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -260,11 +262,12 @@ label =  %percentage:2%%
 
 [module/memory]
 type = internal/memory
-interval = 5
+interval = 3.0
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label =  %gb_used%/%gb_total%
+; label =  %gb_used%/%gb_total%
+label =  %gb_free%
 
 [module/wlan]
 type = internal/network
@@ -321,6 +324,13 @@ type = custom/script
 exec = ~/dotfiles/scripts/vpn-fortivpn.sh
 interval = 5
 click-left = ~/dotfiles/scripts/vpn-fortivpn.sh --toggle &
+format-underline = #ff9900
+
+[module/vpn-openvpn3]
+type = custom/script
+exec = ~/dotfiles/scripts/vpn-openvpn3.sh
+interval = 5
+click-left = ~/dotfiles/scripts/vpn-openvpn3.sh --toggle &
 format-underline = #ff9900
 
 [module/date]

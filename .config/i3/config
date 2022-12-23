@@ -105,7 +105,7 @@ set $workspace10 "10:  Media"
 # set $workspace03 "3:  Rider"
 # set $workspace04 "4:  VsCode"
 # set $workspace05 "5:  Common"
-# set $workspace06 "6:  LifeFlow"
+# set $workspace06 "6:  Hemolens"
 # set $workspace07 "7:  Communication"
 # set $workspace08 "8:  Media"
 # set $workspace09 "9:  OBS"
@@ -350,10 +350,11 @@ assign [class="jetbrains-rider"] $workspace03
 assign [class="Code"] $workspace04
 assign [class="StorageExplorer"] $workspace05
 assign [class="Microsoft Teams - Preview"] $workspace07
-assign [class="Thunderbird"] $workspace07
+assign [class="thunderbird"] $workspace07
 assign [class="Slack"] $workspace07
 assign [class="discord"] $workspace07
 assign [class="Signal"] $workspace07
+assign [class="Ferdi"] $workspace07
 assign [class="Postman"] $workspace08
 assign [class="Joplin"] $workspace08
 assign [class="obs"] $workspace09
@@ -416,7 +417,7 @@ exec --no-startup-id (sleep 1 && ~/.screenlayout/acer+dell.sh)
 
 # applications at startup
 # exec --no-startup-id picom -CG
-exec --no-startup-id ~/LifeFlow/scripts/vpn-forti-network-reset.sh
+exec --no-startup-id ~/Hemolens/scripts/vpn-forti-network-reset.sh
 exec_always --no-startup-id sudo ~/dotfiles/scripts/keychron-fn.sh
 exec_always --no-startup-id xset r rate 200 50 
 # exec_always --no-startup-id "echo 0 > /sys/module/hid_apple/parameters/fnmode"
