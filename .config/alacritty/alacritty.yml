@@ -7,6 +7,11 @@ font:
     # family: "DejaVu Sans Mono"
   # size: 10
 
+window:
+  padding:
+    x: 5
+    y: 5
+
 # Background opacity
 window.opacity: 0.9
 

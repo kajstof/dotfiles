@@ -263,9 +263,10 @@ rm -rf ~/.profile ~/.zshrc ~/.vimrc ~/.Xresources ~/.config/alacritty ~/.config/
 ln -s ~/dotfiles/.profile ~/.profile
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
+ln -s ~/dotfiles/.ideavimrc ~/.ideavimr
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
+ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/fontconfig ~/.config/fontconfig
 ln -s ~/dotfiles/.config/i3 ~/.config/i3
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi

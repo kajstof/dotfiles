@@ -28,6 +28,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/primary]
+;monitor = ${env:MONITOR:DP-2}
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 22
@@ -60,7 +61,7 @@ font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
 font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
-modules-left = i3
+modules-left = i3 bspwm
 modules-center = xwindow
 ; modules-right = mpd filesystem xbacklight xkeyboard cpu memory battery temperature_pch temperature eth wlan bluetooth pulseaudio date powermenu
 ; modules-right = mpd filesystem xbacklight cpu memory battery temperature_pch temperature eth wlan bluetooth vpn-fortivpn pulseaudio date powermenu
@@ -86,6 +87,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/secondary]
+;monitor = ${env:MONITOR:DP-4}
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 22
@@ -114,7 +116,7 @@ font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
 font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
-modules-left = i3
+modules-left = i3 bspwm
 modules-center = xwindow
 modules-right = date
 
