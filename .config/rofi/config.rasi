@@ -1,0 +1,6 @@
+configuration {
+  sidebar-mode: true;
+  show-icons: true;
+  combi-modi: "window,drun";
+}
+@theme "onedark"

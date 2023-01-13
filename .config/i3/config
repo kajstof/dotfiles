@@ -133,7 +133,8 @@ set $workspace10 "10:  Media"
 
 # set $output1 DP-2
 # set $output2 DP-4
-# set $output2 DP-1-3
+set $output1 DP-3
+set $output2 DP-1
 
 workspace $workspace01 output $output1
 workspace $workspace02 output $output1
@@ -413,7 +414,8 @@ bindsym Print exec flameshot gui
 # exec --no-startup-id /usr/bin/nvidia-settings --load-config-only
 
 # monitor configuration
-exec --no-startup-id (sleep 1 && ~/.screenlayout/acer+dell.sh)
+exec --no-startup-id (~/.screenlayout/acer+dell.sh)
+exec --no-startup-id (sleep 3 && ~/.screenlayout/acer+dell.sh)
 
 # applications at startup
 # exec --no-startup-id picom -CG
@@ -421,7 +423,8 @@ exec --no-startup-id ~/Hemolens/scripts/vpn-forti-network-reset.sh
 exec_always --no-startup-id sudo ~/dotfiles/scripts/keychron-fn.sh
 exec_always --no-startup-id xset r rate 200 50 
 # exec_always --no-startup-id "echo 0 > /sys/module/hid_apple/parameters/fnmode"
-exec_always --no-startup-id "/usr/bin/feh --bg-scale ~/dotfiles/wallpapers/earth_sunrise_from_space-wallpaper-2560x1440.jpg"
+# exec_always --no-startup-id "/usr/bin/feh --bg-scale ~/dotfiles/wallpapers/earth_sunrise_from_space-wallpaper-2560x1440.jpg"
+exec_always --no-startup-id ~/.fehbg
 exec --no-startup-id ~/dotfiles/scripts/dell_5411_touchpad.sh
 exec_always --no-startup-id ~/dotfiles/scripts/caps_esc.sh # Doesn't work with VSCode
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh

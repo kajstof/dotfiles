@@ -11,7 +11,8 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 if type "polybar"; then
   count=0
-  for m in $(polybar -m | cut -d":" -f1 | tac); do
+  # for m in $(polybar -m | cut -d":" -f1 | tac); do
+  for m in $(polybar -m | cut -d":" -f1); do
     export MONITOR="$m"
     if [ $count -gt 0 ]; then
       profile="secondary"
