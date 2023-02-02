@@ -18,11 +18,13 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #2f343f
+background = #bb2f343f
 background-alt = #4f545f
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+;foreground = #dfdfdf
+foreground = #ffffff
 foreground-alt = #555
+foreground-icon = #ccc
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -34,14 +36,15 @@ width = 100%
 height = 22
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 3.0
+radius = 0
 fixed-center = false
+separator =
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
-line-color = #f00
+line-size = 1
+line-color = #0f0
 
 border-size = 0
 border-bottom-size = 1
@@ -53,16 +56,19 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
+; font-0 = "Ubuntu Mono Nerd Font:pixelsize=10:weight=100;2"
+; font-0 = "agave Nerd Font:size=10:weight=150;3"
+; font-0 = "JetBrainsMono Nerd Font:size=8:weight=150;2"
 font-0 = "Ubuntu Nerd Font:pixelsize=10:weight=100;2"
 ; font-0 = Ubuntu Mono:pixelsize=11;2
 ; font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ; font-2 = siji:pixelsize=10;1
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
-font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
+; font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+; font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+; font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
-modules-left = i3 bspwm
-modules-center = xwindow
+modules-left = i3 bspwm xwindow
+modules-center =
 ; modules-right = mpd filesystem xbacklight xkeyboard cpu memory battery temperature_pch temperature eth wlan bluetooth pulseaudio date powermenu
 ; modules-right = mpd filesystem xbacklight cpu memory battery temperature_pch temperature eth wlan bluetooth vpn-fortivpn pulseaudio date powermenu
 modules-right = mpd filesystem xbacklight cpu memory battery temperature_pch temperature eth wlan bluetooth vpn-openvpn3 pulseaudio date
@@ -80,8 +86,8 @@ tray-padding = 2
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-; scroll-up = i3wm-wsnext
-; scroll-down = i3wm-wsprev
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -91,14 +97,17 @@ monitor = ${env:MONITOR:DP-1}
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 22
-radius = 3.0
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
 fixed-center = false
+separator =
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
-line-color = #f00
+line-size = 1
+line-color = #0f0
 
 border-size = 0
 border-bottom-size = 1
@@ -110,17 +119,22 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Ubuntu:pixelsize=10:weight=100;2
+; font-0 = "Ubuntu Mono Nerd Font:pixelsize=10:weight=100;2"
+; font-0 = "agave Nerd Font:size=10:weight=150;3"
+; font-0 = "JetBrainsMono Nerd Font:size=8:weight=150;2"
+font-0 = "Ubuntu Nerd Font:pixelsize=10:weight=100;2"
 ; font-0 = Ubuntu Mono:pixelsize=11;2
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
-font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
+; font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+; font-2 = siji:pixelsize=10;1
+; font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+; font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+; font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
-modules-left = i3 bspwm
-modules-center = xwindow
+modules-left = i3 bspwm xwindow
+modules-center =
 modules-right = date
 
-tray-position = right
+tray-position = none
 tray-padding = 2
 
 cursor-click = pointer
@@ -154,7 +168,8 @@ interval = 30
 mount-0 = /
 
 ; label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used%/%total%
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
+; label-mounted =  {F#0a81f5}%mountpoint%%{F-} %free%
+label-mounted =  %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -260,7 +275,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label =  %percentage:2%%
+label =  %percentage:2%%
 
 [module/memory]
 type = internal/memory
@@ -269,7 +284,7 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 ; label =  %gb_used%/%gb_total%
-label =  %gb_free%
+label =  %gb_free%
 
 [module/wlan]
 type = internal/network
@@ -337,7 +352,7 @@ format-underline = #ff9900
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date = " %Y-%m-%d"
 date-alt =
@@ -427,11 +442,13 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
+time-format = %H:%M
 
 format-charging = <animation-charging> <label-charging>
 ; format-charging-underline = #ffb52a
 
-format-discharging =  <animation-discharging> <label-discharging>
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-foreground = #f00
 ; format-discharging-underline = ${self.format-charging-underline}
 
 format-full =  <label-full>
@@ -444,26 +461,33 @@ format-charging-underline = #ffb52a
 ; format-discharging = <label-discharging>
 label-discharging = %percentage%% %time%
 format-discharging-underline = ${self.format-charging-underline}
+; format-discharging-underline = ${self.format-charging-underline}
 
 ; format-full-prefix = " "
 ; format-full-prefix-foreground = ${colors.foreground-alt}
 ; format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.foreground-icon}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.foreground-icon}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-foreground = ${colors.foreground-icon}
 animation-discharging-framerate = 750
 
 [module/temperature]
@@ -471,38 +495,38 @@ type = internal/temperature
 thermal-zone = 8
 warn-temperature = 80
 
-format = <label>
+format = <ramp> <label>
 format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label =  %temperature-c%
-label-warn =  %temperature-c%
+label = %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-icon}
 
 [module/temperature_pch]
 type = internal/temperature
 thermal-zone = 6
 warn-temperature = 75
 
-format = <label>
+format = <ramp> <label>
 format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label =  PCH %temperature-c%
-label-warn =  PCH %temperature-c%
+label = PCH %temperature-c%
+label-warn = PCH %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-icon}
 
 [module/powermenu]
 type = custom/menu

@@ -90,16 +90,26 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+Shift+d focus child
 
-set $workspace01 "1:  Web"
-set $workspace02 "2:  Shell"
-set $workspace03 "3:  Rider"
-set $workspace04 "4:  Code"
-set $workspace05 "5:  Data"
-set $workspace06 "6:  Misc"
-set $workspace07 "7:  Comm"
-set $workspace08 "8:  Tools"
-set $workspace09 "9:  OBS"
-set $workspace10 "10:  Media"
+set $workspace01 "1:  "
+set $workspace02 "2:  "
+set $workspace03 "3:  "
+set $workspace04 "4:  "
+set $workspace05 "5:  "
+set $workspace06 "6:  "
+set $workspace07 "7:  "
+set $workspace08 "8:  "
+set $workspace09 "9:  "
+set $workspace10 "10:  "
+# set $workspace01 "1:  Web"
+# set $workspace02 "2:  Shell"
+# set $workspace03 "3:  Rider"
+# set $workspace04 "4:  Code"
+# set $workspace05 "5:  Data"
+# set $workspace06 "6:  Misc"
+# set $workspace07 "7:  Comm"
+# set $workspace08 "8:  Tools"
+# set $workspace09 "9:  OBS"
+# set $workspace10 "10:  Media"
 # set $workspace01 "1:  Browsers"
 # set $workspace02 "2:  Terminals"
 # set $workspace03 "3:  Rider"
@@ -257,7 +267,7 @@ set $text-color          #f3f4f5
 # set $inactive-text-color #676e7d
 set $inactive-text-color #888888
 set $active-text-color   #ffffff
-set $active-tab-color   #0066cc
+set $active-tab-color   #0099ff
 set $border-color        #0066cc
 # set $border-color        #0066cc
 set $urgent-bg-color     #e53935
@@ -283,8 +293,7 @@ bindsym $mod+Ctrl+j exec python3 ~/dotfiles/scripts/i3-move-container-down.py
 bindsym $mod+Ctrl+Tab exec python3 ~/dotfiles/scripts/i3-swap-workspaces.py
 
 # border & titlebar
-# default_border pixel 1
-# default_border normal
+default_border pixel 2
 # hide_edge_borders smart
 bindsym $mod+Ctrl+x [class="^.*"] border toggle
 
@@ -351,6 +360,10 @@ assign [class="jetbrains-rider"] $workspace03
 assign [class="Code"] $workspace04
 assign [class="StorageExplorer"] $workspace05
 assign [class="Microsoft Teams - Preview"] $workspace07
+assign [instance="crx__cifhbcnohmdccbgoicgdjpfamggdegmo"] $workspace07 # Edge - Teams
+assign [instance="crx__faolnafnngnfdaknnbpnkhgohbobgegn"] $workspace07 # Edge - Outlook
+assign [instance="crx_cifhbcnohmdccbgoicgdjpfamggdegmo"] $workspace07 # Chrome - Teams
+assign [instance="crx_faolnafnngnfdaknnbpnkhgohbobgegn"] $workspace07 # Chrome - Outlook
 assign [class="thunderbird"] $workspace07
 assign [class="Slack"] $workspace07
 assign [class="discord"] $workspace07
@@ -367,13 +380,11 @@ assign [class="Clementine"] $workspace10
 bindsym $mod+Shift+v exec "code ~/dotfiles ~/dotfiles/README.md ~/dotfiles/.config/i3/config ~/dotfiles/.config/polybar/config ~/dotfiles/.zshrc ~/dotfiles/init.vim ~/dotfiles/.vimrc ~/dotfiles/.config/alacritty/alacritty.yml ~/dotfiles/.config/vifm/vifmrc"
 
 # pulseaudio controls
+# bindsym $mod+Shift+a exec gnome-control-center
 # bindsym $mod+Shift+a exec pavucontrol
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
-
-# gnome-control-center
-bindsym $mod+Shift+a exec gnome-control-center
 
 # screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -433,7 +444,11 @@ exec --no-startup-id copyq
 exec_always --no-startup-id "~/dotfiles/scripts/polybar_launch.sh"
 exec --no-startup-id QT_QPA_PLATFORMTHEME=gtk3 crow # QTranslate icons
 # exec --no-startup-id firefox
-exec --no-startup-id teams
+# exec --no-startup-id teams
+exec --no-startup-id /opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo "--app-url=https://teams.microsoft.com/?clientType=pwa"
+exec --no-startup-id /opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ %U
+# exec --no-startup-id /opt/google/chrome/google-chrome --password-store=gnome --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo
+# exec --no-startup-id /opt/google/chrome/google-chrome --password-store=gnome --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
 exec --no-startup-id thunderbird
 exec --no-startup-id signal-desktop
 # exec --no-startup-id slack
@@ -441,3 +456,22 @@ exec --no-startup-id signal-desktop
 # exec --no-startup-id joplin
 exec --no-startup-id ~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u
 exec --no-startup-id /opt/forticlient/fortitray
+exec --no-startup-id eval "$(ssh-agent)"
+# exec --no-startup-id ssh-agent
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# scratchpad
+# exec_always --no-startup-id pgrep -f 'alacritty --class pulse,pulse' || alacritty --class pulse,pulse -e pulsemixer
+exec --no-startup-id alacritty --class pulse,pulse -e pulsemixer
+for_window [class="pulse"] move scratchpad
+bindsym $mod+Shift+a [class="pulse"] scratchpad show; move position center
+
+exec --no-startup-id pgrep -f 'alacritty --class fm,fm' || alacritty --class fm,fm -e vifm
+for_window [class="fm"] move scratchpad
+bindsym $mod+Shift+f [class="fm"] scratchpad show; move position center
+# bindsym $mod+Shift+f [class="Gnome-calculator"] scratchpad show
+
+# exec --no-startup-id alacritty --class mus,mus -e ncmpcpp
+# exec --no-startup-id alacritty --class news,news -e newsboat

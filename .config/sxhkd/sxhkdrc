@@ -1,6 +1,9 @@
 Print
 	flameshot gui
 
+super + shift + a
+	pulsemixer
+
 super + z
 	crow
 

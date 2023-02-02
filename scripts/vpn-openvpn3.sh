@@ -22,7 +22,7 @@ case "$1" in
     ;;
 *)
     if [ "$(connection_status)" = "1" ]; then
-        echo "%{F#66ff66}  VPN"
+        echo "%{F#66ff66}廬 VPN"
     else
         echo "%{F#666666} VPN"
     fi

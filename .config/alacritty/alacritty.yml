@@ -1,11 +1,11 @@
 # Fonts
 font:
   normal:
-    family: "UbuntuMono Nerd Font"
-  size: 10.5
+    # family: "UbuntuMono Nerd Font"
     # family: "JetBrainsMono Nerd Font"
+    family: "agave Nerd Font"
     # family: "DejaVu Sans Mono"
-  # size: 10
+  size: 10
 
 window:
   padding:
