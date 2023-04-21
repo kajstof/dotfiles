@@ -41,18 +41,19 @@ Plug 'bling/vim-airline'                " lean & mean status/tabline for vim tha
 Plug 'vim-airline/vim-airline-themes'   " A collection of themes for vim-airline
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }  " A tree explorer plugin for vim.
 Plug 'xuyuanp/nerdtree-git-plugin'      " A plugin of NERDTree showing git status
-Plug 'tpope/vim-fugitive'               " fugitive.vim: A Git wrapper so awesome, it should be illegal 
 Plug 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
 Plug 'tpope/vim-commentary'             " commentary.vim: comment stuff out
+Plug 'tpope/vim-fugitive'               " fugitive.vim: A Git wrapper so awesome, it should be illegal 
 Plug 'tpope/vim-surround'               " surround.vim: quoting/parenthesizing made simple
 Plug 'honza/vim-snippets'               " vim-snipmate default snippets (Previously snipmate-snippets)
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 Plug 'sheerun/vim-polyglot'             " A solid language pack for Vim.
 Plug 'brooth/far.vim'                   " Find And Replace Vim plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 " Plugins under test
+" Plug 'justinmk/vim-sneak'
 " Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 " Plug 'ctrlpvim/ctrlp.vim'               " Active fork of kien/ctrlp.vim. Fuzzy file, buffer, mru, tag, etc finder
 " Plug 'vim-syntastic/syntastic'          " Syntax checking hacks for vim

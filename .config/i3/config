@@ -425,7 +425,7 @@ bindsym Print exec flameshot gui
 # exec --no-startup-id /usr/bin/nvidia-settings --load-config-only
 
 # monitor configuration
-exec --no-startup-id (~/.screenlayout/acer+dell.sh)
+# exec --no-startup-id (~/.screenlayout/acer+dell.sh)
 exec --no-startup-id (sleep 3 && ~/.screenlayout/acer+dell.sh)
 
 # applications at startup
@@ -445,10 +445,10 @@ exec_always --no-startup-id "~/dotfiles/scripts/polybar_launch.sh"
 exec --no-startup-id QT_QPA_PLATFORMTHEME=gtk3 crow # QTranslate icons
 # exec --no-startup-id firefox
 # exec --no-startup-id teams
-exec --no-startup-id /opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo "--app-url=https://teams.microsoft.com/?clientType=pwa"
-exec --no-startup-id /opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ %U
-# exec --no-startup-id /opt/google/chrome/google-chrome --password-store=gnome --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo
-# exec --no-startup-id /opt/google/chrome/google-chrome --password-store=gnome --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
+# exec --no-startup-id /opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo "--app-url=https://teams.microsoft.com/?clientType=pwa"
+# exec --no-startup-id /opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ %U
+exec --no-startup-id /opt/google/chrome/google-chrome --password-store=gnome --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo
+exec --no-startup-id /opt/google/chrome/google-chrome --password-store=gnome --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
 exec --no-startup-id thunderbird
 exec --no-startup-id signal-desktop
 # exec --no-startup-id slack
@@ -467,6 +467,10 @@ bindsym $mod+Shift+minus move scratchpad
 exec --no-startup-id alacritty --class pulse,pulse -e pulsemixer
 for_window [class="pulse"] move scratchpad
 bindsym $mod+Shift+a [class="pulse"] scratchpad show; move position center
+
+exec --no-startup-id alacritty --class nmtui,nmtui -e nmtui
+for_window [class="nmtui"] move scratchpad
+bindsym $mod+Shift+n [class="nmtui"] scratchpad show; move position center
 
 exec --no-startup-id pgrep -f 'alacritty --class fm,fm' || alacritty --class fm,fm -e vifm
 for_window [class="fm"] move scratchpad

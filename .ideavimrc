@@ -1,7 +1,10 @@
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+
 set number
 " set relativenumber
-set commentary
-set surround
+
 set ideajoin
 
 map Y y$
